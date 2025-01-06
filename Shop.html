@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- My Style -->
+    <link rel="stylesheet" href="Serenade.css" />
+</head>
+</head>
+
+<body>
+    <!-- NavBar Start -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Serenade.</a>
+
+        <div class="navbar-nav">
+            <a href="Home.html">Home</a>
+            <a href="Home.html#about">About</a>
+            <a href="Shop.html#product">Product</a>
+            <li class="nav-item dropdown">
+                <a href="Shop.html#shop" class="dropdown-toggle">Shop</a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-section">
+                        <a href="#kategori-kain">Kain</a>
+                        <a href="#kategori-keramik">Keramik</a>
+                        <a href="#kategori-rotan">Rotan</a>
+                        <a href="#kategori-tanahLiat">Tanah Liat</a>
+                        <a href="#kategori-kayu">Kayu</a>
+
+                    </div>
+                </div>
+            </li>
+            <a href="FAQ.html">FAQ</a>
+            <li class="nav-item dropdown">
+                <a href="Shop.html" class="dropdown-toggle">Ganti Warna</a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-section">
+                        <div class="kotak merah"></div>
+                        <input type="range" name="sMerah" min="0" max="255" />
+                        <div class="kotak hijau"></div>
+                        <input type="range" name="sHijau" min="0" max="255" />
+                        <div class="kotak biru"></div>
+                        <input type="range" name="sBiru" min="0" max="255" />
+                    </div>
+                </div>
+            </li>
+        </div>
+
+        <!-- Navbar Extra Start -->
+        <div class="navbar-extra">
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            <a href="#" id="shopping-cart-button">
+                <i data-feather="shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+        <!-- Navbar Extra End -->
+
+        <!-- Search From Start -->
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here..." />
+            <label for="search-box"><i data-feather="search"></i></label>
+        </div>
+        <!-- Search From End -->
+
+        <!-- Shopping Cart Start -->
+        <div class="shopping-cart" id="shopping-cart">
+            <div class="cart-items">
+                <h3>Your Cart</h3>
+                <a href="https://wa.me/628888581813">
+                    <h3 class="btn-wa">Pesan by Whatsapp</h3>
+                </a>
+            </div>
+        </div>
+        <!-- Shopping Cart End -->
+    </nav>
+    <!-- NavBar End -->
+
+    <!-- Category Section Start -->
+    <section id="category" class="category">
+        <h2>Category</h2>
+        <p>
+        Koleksi produk kami menghadirkan kehangatan dan keindahan untuk setiap sudut ruang Anda dan gaya terbaru yang akan memperkaya penampilan Anda setiap hari.
+        </p>
+
+        <div class="row">
+            <div class="category-card">
+                <img src="Gambar/KategoriKain.jpg" alt="Cangkir" class="category-card-img" />
+                <a href="Shop.html#kategori-kain">
+                    <h3 class="category-card-title">Kain</h3>
+                </a>
+            </div>
+            <div class="category-card">
+                <img src="Gambar/KategoriKeramik.jpg" alt="Cangkir" class="category-card-img" />
+                <a href="Shop.html#kategori-keramik">
+                    <h3 class="category-card-title">Keramik</h3>
+                </a>
+            </div>
+            <div class="category-card">
+                <img src="Gambar/KategoriRotan.jpg" alt="Cangkir" class="category-card-img" />
+                <a href="Shop.html#kategori-rotan">
+                    <h3 class="category-card-title">Rotan</h3>
+                </a>
+            </div>
+            <div class="category-card">
+                <img src="Gambar/KategoriTanahLiat.png" alt="Cangkir" class="category-card-img" />
+                <a href="Shop.html#kategori-tanahLiat">
+                    <h3 class="category-card-title">Tanah Liat</h3>
+                </a>
+            </div>
+            <div class="category-card">
+                <img src="Gambar/KategoriKayu1.jpg" alt="Cangkir" class="category-card-img" />
+                <a href="Shop.html#kategori-kayu">
+                    <h3 class="category-card-title">Kayu</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- category Section End -->
+
+    <!-- Shop Section Start -->
+    <!-- Kain -->
+    <section class="shop" id="shop">
+        <h2 id="kategori-kain" class="percategory">Kain</h2>
+        <p>
+            Produk kain yang menawarkan kelembutan luar biasa dan ketahanan yang optimal, ideal untuk berbagai kebutuhan Anda. </p>
+
+        <div class="row">
+            <div class="shop-card" id="card1">
+                <div class="shop-image">
+                    <img src="Gambar/Kain1.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Heritage Batik Fabric</h3>
+                </div>
+                <div class="shop-price">IDR 275K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card1" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button1"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card2">
+                <div class="shop-image">
+                    <img src="Gambar/Kain2.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Classic Batik Cloth</h3>
+                </div>
+                <div class="shop-price">IDR 400K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card2" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button2"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card3">
+                <div class="shop-image">
+                    <img src="Gambar/Kain3.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Etnik Batik Textile</h3>
+                </div>
+                <div class="shop-price">IDR 320K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card3" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button3"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card4">
+                <div class="shop-image">
+                    <img src="Gambar/Kain4.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Sumba Heritage Weave</h3>
+                </div>
+                <div class="shop-price">IDR 350K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card4" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button4"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card5">
+                <div class="shop-image">
+                    <img src="Gambar/Kain5.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Sumba Tranquil Craft</h3>
+                </div>
+                <div class="shop-price">IDR 355K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card5" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button5"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card6">
+                <div class="shop-image">
+                    <img src="Gambar/Kain6.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Sumba Splendor Textilee</h3>
+                </div>
+                <div class="shop-price">IDR 375K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card6" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button6"></i
+              ></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Keramik -->
+    <section class="shop" id="shop">
+        <h2 id="kategori-keramik" class="shop">Keramik</h2>
+        <p>
+            Produk keramik kami terbuat dari keramik berkualitas tinggi, menawarkan keindahan dan ketahanan yang luar biasa. </p>
+
+        <div class="row">
+            <div class="shop-card" id="card7">
+                <div class="shop-image">
+                    <img src="Gambar/Keramik7.png" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Infinity Crystal Vase</h3>
+                </div>
+                <div class="shop-price">IDR 165K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card7" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button7"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card8">
+                <div class="shop-image">
+                    <img src="Gambar/Keramik5.png" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Technicolour Crystal Candle Hold</h3>
+                </div>
+                <div class="shop-price">IDR 105K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card8" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button8"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card9">
+                <div class="shop-image">
+                    <img src="Gambar/Keramik1.png" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Boho Glass Drink Pitcher</h3>
+                </div>
+                <div class="shop-price">IDR 185K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card9" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button9"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card10">
+                <div class="shop-image">
+                    <img src="Gambar/Keramik2.png" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Bowline Glass Set of 2</h3>
+                </div>
+                <div class="shop-price">IDR 150K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card10" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button10"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card11">
+                <div class="shop-image">
+                    <img src="Gambar/Keramik3.png" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Mushroom Glass Vase</h3>
+                </div>
+                <div class="shop-price">IDR 285K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card11" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button11"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card12">
+                <div class="shop-image">
+                    <img src="Gambar/Keramik8.png" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Bow Crystal Bookends</h3>
+                </div>
+                <div class="shop-price">IDR 225K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card12" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button12"></i
+              ></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Rotan-->
+    <section class="shop" id="shop">
+        <h2 id="kategori-rotan" class="percategory">Rotan</h2>
+        <p>
+            Produk Rotan kami desain elegan dan tekstur unik rotan menambah sentuhan eksotis dan alami pada setiap ruang.
+        </p>
+
+        <div class="row">
+            <div class="shop-card" id="card13">
+                <div class="shop-image">
+                    <img src="Gambar/Rotan 2.jpg" alt="category 2" />
+                </div>
+                <div class="shop-content">
+                    <h3>Rustic Royale Chair</h3>
+                </div>
+                <div class="shop-price">IDR 240K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card13" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button13"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card14">
+                <div class="shop-image">
+                    <img src="Gambar/Rotan3.png" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Rustic Chic Nakas</h3>
+                </div>
+                <div class="shop-price">IDR 130K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card14" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button14"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card15">
+                <div class="shop-image">
+                    <img src="Gambar/rotan4.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Laundry Luxe Basket</h3>
+                </div>
+                <div class="shop-price">IDR 150K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card15" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button15"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card16">
+                <div class="shop-image">
+                    <img src="Gambar/Rotan5.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Celestial Rattan Lamp</h3>
+                </div>
+                <div class="shop-price">IDR 210K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card16" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button16"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card17">
+                <div class="shop-image">
+                    <img src="Gambar/Rotan1.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Bamboo Bliss Tisu Box</h3>
+                </div>
+                <div class="shop-price">IDR 100K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card17" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button17"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card18">
+                <div class="shop-image">
+                    <img src="Gambar/Rotan6.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>NatureNest Picnic Basket</h3>
+                </div>
+                <div class="shop-price">IDR 95K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card18" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button18"></i
+              ></a>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!-- tanahLiat -->
+    <section class="shop" id="shop">
+        <h2 id="kategori-tanahLiat" class="percategory">Tanah Liat</h2>
+        <p>
+            Produk Tanah Liat kami cocok untuk penggunaan sehari-hari maupun sebagai elemen dekoratif, produk ini menawarkan kombinasi sempurna antara fungsionalitas dan seni.
+        </p>
+
+        <div class="row">
+            <div class="shop-card" id="card19">
+                <div class="shop-image">
+                    <img src="Gambar/TanahLiat1.png" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Terra Pot</h3>
+                </div>
+                <div class="shop-price">IDR 140K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card19" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button19"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card20">
+                <div class="shop-image">
+                    <img src="Gambar/TanahLiat2.png" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Cutlery Stand</h3>
+                </div>
+                <div class="shop-price">IDR 50K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card20" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button20"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card21">
+                <div class="shop-image">
+                    <img src="Gambar/TanahLiat3.png" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Earthen Sip Cup</h3>
+                </div>
+                <div class="shop-price">IDR 110K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card21" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button21"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card22">
+                <div class="shop-image">
+                    <img src="Gambar/TanahLiat5.png" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Earthen Sip Cup</h3>
+                </div>
+                <div class="shop-price">IDR 70K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card22" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button22"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card23">
+                <div class="shop-image">
+                    <img src="Gambar/TanahLiat9.png" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>ClayCraft BBQ</h3>
+                </div>
+                <div class="shop-price">IDR 105K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card23" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button23"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card24">
+                <div class="shop-image">
+                    <img src="Gambar/TanahLiat11.png" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Delight Bowl</h3>
+                </div>
+                <div class="shop-price">IDR 55K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card24" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button24"></i
+              ></a>
+                </div>
+            </div>
+        </div>
+    </section>  
+    <!--Kayu -->
+    <section class="shop" id="shop">
+        <h2 id="kategori-kayu" class="percategory">Kayu</h2>
+        <p>
+            Produk kayu yang menawarkan kombinasi keindahan, kekuatan, dan kehangatan, menjadikannya pilihan sempurna untuk setiap rumah atau ruang kerja. 
+        </p>
+
+        <div class="row">
+            <div class="shop-card" id="card25">
+                <div class="shop-image">
+                    <img src="Gambar/Kayu1.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>HarmonyWood Bowl</h3>
+                </div>
+                <div class="shop-price">IDR 40K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card25" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button25"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card26">
+                <div class="shop-image">
+                    <img src="Gambar/Kayu2.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Nature's Scoop</h3>
+                </div>
+                <div class="shop-price">IDR 50K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card26" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button26"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card27">
+                <div class="shop-image">
+                    <img src="Gambar/Kayu3.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>TimberSip Cup</h3>
+                </div>
+                <div class="shop-price">IDR 50K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card27" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button27"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card28">
+                <div class="shop-image">
+                    <img src="Gambar/Kayu4.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>PureWood Platter</h3>
+                </div>
+                <div class="shop-price">IDR 10K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card28" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button28"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card29">
+                <div class="shop-image">
+                    <img src="Gambar/Kayu5.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Natural Essence Clock</h3>
+                </div>
+                <div class="shop-price">IDR 150K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card29" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button29"></i
+              ></a>
+                </div>
+            </div>
+            <div class="shop-card" id="card30">
+                <div class="shop-image">
+                    <img src="Gambar/Kayu6.jpg" alt="category 1" />
+                </div>
+                <div class="shop-content">
+                    <h3>Earthly Elegance Lamp</h3>
+                </div>
+                <div class="shop-price">IDR 325K</div>
+                <div class="shop-icons">
+                    <button class="add-to-cart">
+                        <a href="#card30" class="item-cart"><i data-feather="shopping-cart"></i></a>
+                        
+                    </button>
+                    <a href="#"><i data-feather="eye" class="item-detail-button30"></i
+              ></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shop Section End -->
+
+    <!-- Reviews Section Start -->
+    <div class="reviews">
+        <h1>Customer's <span style="color: #b6895b">Review</span></h1>
+        <div class="review-cards" id="reviewCards">
+          <div class="card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>
+              Setiap barang handmade adalah perwujudan dari dedikasi dan
+              keterampilan pengrajin yang dituangkan dengan penuh cinta dan
+              perhatian. Produk ini memiliki karakter unik yang sulit ditemukan
+              pada barang yang diproduksi secara massal, membuatnya lebih istimewa
+              dan berharga di mata kolektor.
+            </p>
+            <div class="customer">
+              <img src="Gambar/arabella.jpg" alt="Arabella Calistha" />
+              <div class="customer-info">
+                <span>Arabella Calistha</span><br />
+                Happy Customer
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>
+              Pengalaman belanja yang luar biasa! Barang-barang handmade ini
+              menghadirkan sentuhan khusus yang tidak bisa ditemukan di tempat
+              lain. Saya sangat merekomendasikan kepada siapa pun yang mencari
+              sesuatu yang unik dan berkualitas. Barang handmade ini menunjukkan
+              dedikasi dan keahlian pengrajin.
+            </p>
+            <div class="customer">
+              <img src="Gambar/elyna.jpg" alt="Elyna Anastasya" />
+              <div class="customer-info">
+                <span>Elyna Anastasya</span><br />
+                Happy Customer
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>
+              Ketika barang ini tiba, saya sangat terkesan dengan kualitas dan
+              kehalusan finishing-nya. Sangat jelas bahwa pengrajin menghabiskan
+              banyak waktu dan usaha untuk menciptakan produk yang sempurna.
+              Produk kerajinan tangan ini sangat detail dan berkualitas tinggi.
+            </p>
+            <div class="customer">
+              <img src="Gambar/haikal.jpg" alt="Haikal Raharja" />
+              <div class="customer-info">
+                <span>Haikal Raharja</span><br />
+                Happy Customer
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>
+              Produk yang saya terima jauh lebih indah daripada yang saya
+              bayangkan! Kerajinan tangan ini benar-benar menggambarkan keahlian
+              pengrajinnya. Saya suka desainnya yang autentik dan bahan yang ramah
+              lingkungan.
+            </p>
+            <div class="customer">
+              <img src="Gambar/karel.jpg" alt="Karel Hastant" />
+              <div class="customer-info">
+                <span>Karel Hastanto</span><br />
+                Happy Customer
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>
+              Produk handmade membawa sentuhan personal yang tidak bisa ditiru
+              oleh mesin. Setiap barang memiliki jiwa dan karakter tersendiri.
+              Tidak hanya indah, tetapi juga fungsional. Kerajinan tangan ini
+              membawa sentuhan seni ke dalam kehidupan sehari-hari saya.
+            </p>
+            <div class="customer">
+              <img src="Gambar/artajuna.jpg" alt="Artajuna Reirendra" />
+              <div class="customer-info">
+                <span>Artajuna Reirendra</span><br />
+                Happy Customer
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>
+              Pelayanan luar biasa dan kualitas produk yang menakjubkan. Kerajinan
+              tangan ini menjadi bagian yang istimewa di rumah saya. Produk ini
+              mampu bertahan dalam jangka waktu yang lama, menjadi investasi yang
+              sangat berharga.
+            </p>
+            <div class="customer">
+              <img src="Gambar/yesenia.jpg" alt="Yesenia Nathusa" />
+              <div class="customer-info">
+                <span>Yesenia Nathusa</span><br />
+                Happy Customer
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="write-review">
+          <button id="writeReviewBtn">Write a Review</button>
+        </div>
+        <div id="reviewmodall" class="modall">
+          <div class="modall-content">
+            <h2>Write Your Review</h2>
+            <div class="rating">
+              <span data-value="1">&#9733;</span>
+              <span data-value="2">&#9733;</span>
+              <span data-value="3">&#9733;</span>
+              <span data-value="4">&#9733;</span>
+              <span data-value="5">&#9733;</span>
+            </div>
+            <textarea
+              placeholder="Tell us your feedback about the product"
+            ></textarea>
+            <input type="text" placeholder="Your name" />
+            <input type="email" placeholder="Your email address" />
+            <input type="file" accept="image/*" />
+            <button class="cancel-btn" id="cancelBtn">Cancel</button>
+            <button class="submit-btn">Submit</button>
+          </div>
+        </div>
+      </div>
+    <!-- Reviews Section End -->
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="socials">
+            <a href="https://www.instagram.com/telkomuniversity?igsh=bG5oczcyeXRyNzgz"><i data-feather="instagram"></i> </a>
+            <a href="https://x.com/UnivTelkom?t=DH747GFKw0vRYtiKT-rZlQ&s=09"><i data-feather="twitter"></i> </a>
+            <a href="https://www.facebook.com/share/15QzA39W9m/"><i data-feather="facebook"></i> </a>
+        </div>
+        <div class="links">
+            <a href="Home.html">Home</a>
+            <a href="Home.html#about">About</a>
+            <a href="Shop.html#product">Product</a>
+            <a href="Shop.html#shop">Shop</a>
+            <a href="Contact.html">Contact Us</a>
+            <a href="FAQ.html">FAQ</a>
+        </div>
+        <div class="credit">
+            <p>Created by <a href="Home.html">Serenade</a>. | &copy; 2024</p>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Modal Box Item Detail Start -->
+    <div class="modal" id="item-detail-modal1">
+        <div class="modal-container">
+            <a href="#" class="close-icon1"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="Gambar/Kain1.jpg" alt="category 1" />
+                <div class="category-content">
+                    <h2>Deskripsi Produk</h2>
+                    <p>
+                        Heritage Batik Fabric adalah produk tekstil tradisional Indonesia yang dibuat melalui teknik pewarnaan lilin resisif. Proses ini melibatkan pencampuran lilin panas pada kain, biasanya katun atau sutra, untuk menciptakan pola yang indah dan kompleks. Setiap motif batik memiliki makna dan simbolisme yang mendalam, mencerminkan budaya dan identitas Indonesia.
+                    </p><br>
+                    <h2>Spesifikasi Produk</h2>
+                    <p>Ukuran : Mulai dari 90 cm x 90 cm hingga 150 cm x 150 cm</p>
+                    <p>Warna : Kombinasi warna hitam dan cream</p>
+                    <p>Bahan : Katun berkualitas tinggi</p>   
+                    <p>Berat : 200-400 gram/meter</p><br>    
+                    <div class="product-price"><h2>IDR 275K</h2></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="item-detail-modal2">
+        <div class="modal-container">
+            <a href="#" class="close-icon2"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="Gambar/Kain2.jpg" alt="category 1" />
+                <div class="category-content">
+                    <h2>Deskripsi Produk</h2>
+                    <p>
+                        Classic Batik Cloth adalah tekstil yang kaya akan nilai seni dan budaya Indonesia, dibuat melalui proses pewarnaan menggunakan teknik lilin resist. Setiap lembar kain batik mencerminkan keindahan motif tradisional yang diwariskan dari generasi ke generasi. Dengan detail yang halus dan warna yang memukau, Classic Batik Cloth menjadi pilihan utama untuk berbagai keperluan, mulai dari pakaian sehari-hari hingga acara resmi.
+                    </p><br>
+                    <h2>Spesifikasi Produk</h2>
+                    <p>Ukuran : 100 cm x 200 cm</p>
+                    <p>Warna : Kombinasi warna biru dan cream</p>
+                    <p>Bahan : Sutra</p>   
+                    <p>Berat : 150 gram/meter</p><br>  
+                    <div class="category-price">IDR 400K</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="item-detail-modal3">
+        <div class="modal-container">
+            <a href="#" class="close-icon3"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="Gambar/Kain3.jpg" alt="category 1" />
+                <div class="category-content">
+                    <h2>Deskripsi Produk</h2>
+                    <p>
+                        Etnik Batik Textile adalah produk tekstil tradisional yang mencerminkan kekayaan budaya dan identitas etnik dari berbagai daerah di Indonesia. Teknik pewarnaan lilin resisif digunakan untuk menciptakan motif yang unik dan kompleks, dengan setiap desain memiliki makna dan simbolisme yang mendalam.
+                    </p><br>
+                    <h2>Spesifikasi Produk</h2>
+                    <p>Ukuran : 100 cm x 200 cm.</p>
+                    <p>Warna : Kombinasi warna Biru dan Cream</p>
+                    <p>Bahan : Katun Primisima.</p>   
+                    <p>Berat : Sekitar 250 gram/meter</p><br>    
+                    <div class="product-price"><h2>IDR 320K</h2></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="item-detail-modal4">
+        <div class="modal-container">
+            <a href="#" class="close-icon4"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="Gambar/Kain4.jpg" alt="category 1" />
+                <div class="category-content">
+                    <h2>Deskripsi Produk</h2>
+                    <p>
+                        Sumba Heritage Weave adalah tekstil tradisional dari Pulau Sumba, Indonesia, yang dibuat menggunakan teknik ikat. Teknik ini melibatkan proses memasukkan benang benang dalam pewarnaan sebelum dipotong dan diikat untuk menciptakan pola yang unik dan kompleks. Motif ikat Sumba sering kali menggambarkan simbol sosial dan spiritual yang penting dalam budaya Sumba.
+                    </p><br>
+                    <h2>Spesifikasi Produk</h2>
+                    <p>Ukuran : 100 cm x 200 cm.</p>
+                    <p>Warna : Kombinasi warna merah, biru, dan hitam.</p>
+                    <p>Bahan : Benang alami </p>   
+                    <p>Berat : Sekitar 250 gram/meter</p><br>    
+                    <div class="product-price"><h2>IDR 350K</h2></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="item-detail-modal5">
+        <div class="modal-container">
+            <a href="#" class="close-icon5"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="Gambar/Kain5.jpg" alt="category 1" />
+                <div class="category-content">
+                    <h2>Deskripsi Produk</h2>
+                    <p>
+                        Sumba Tranquil Craft adalah tekstil elegan yang terinspirasi dari warisan budaya Pulau Sumba. Produk ini dibuat melalui teknik ikat yang rumit, di mana benang-benang diwarnai sebelum dijalin menjadi kain. Pola ikat Sumba yang unik sering kali menggambarkan kisah-kisah spiritual dan sosial yang kaya, membuat setiap lembar kain menjadi karya seni tersendiri.
+                    </p><br>
+                    <h2>Spesifikasi Produk</h2>
+                    <p>Ukuran : 100 cm x 200 cm.</p>
+                    <p>Warna : Kombinasi warna alami biru dan putih </p>
+                    <p>Bahan : Benang alami</p>   
+                    <p>Berat : 150-300 gram/meter</p><br>    
+                    <div class="product-price"><h2>IDR 355K</h2></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="item-detail-modal6">
+        <div class="modal-container">
+            <a href="#" class="close-icon6"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="Gambar/Kain6.jpg" alt="category 1" />
+                <div class="category-content">
+                    <h2>Deskripsi Produk</h2>
+                    <p>
+                        Sumba Splendor Textile adalah hasil kerajinan tangan yang memukau dari Pulau Sumba, Indonesia, yang dibuat dengan teknik ikat yang sangat teliti. simbolisme budaya yang mendalam, sehingga setiap kain memiliki cerita dan keindahan tersendiri. Tekstil ini sangat cocok untuk berbagai keperluan.
+                    </p><br>
+                    <h2>Spesifikasi Produk</h2>
+                    <p>Ukuran : 100 cm x 200 cm.</p>
+                    <p>Warna : Kombinasi warna merah, hitam, dan putih </p>
+                    <p>Bahan : Benang alami</p>   
+                    <p>Berat : 200 gram/meter</p><br>    
+                    <div class="product-price"><h2>IDR 375K</h2></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="item-detail-modal7">
+        <div class="modal-container">
+            <a href="#" class="close-icon7"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="Gambar/Keramik7.png" alt="category 1" />
+                <div class="category-content">
+                    <h2>Deskripsi Produk</h2>
+                    <p>
+                        Infinity Crystal Vase adalah vas elegan yang dirancang untuk memberikan sentuhan kemewahan pada ruangan Anda. Vas ini memiliki bentuk unik yang menggambarkan keabadian dan siklus alam, dengan desain yang terlihat seperti huruf "U". Cocok untuk menampilkan rangkaian bunga atau sebagai dekorasi eksklusif di rumah atau kantor.
+                    </p><br>
+                    <h2>Spesifikasi Produk</h2>
+                    <p>Ukuran : 16.5cm x 20.5cm cm.</p>
+                    <p>Warna : Merah muda transparan</p>
+                    <p>Bahan : Keramik berkualitas tinggi.</p>   
+                    <p>Berat : Sekitar 1.5kg</p><br>    
+                    <div class="product-price"><h2>IDR 165K</h2></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="item-detail-modal8">
+        <div class="modal-container">
+            <a href="#" class="close-icon8"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="Gambar/Keramik5.png" alt="category 1" />
+                <div class="category-content">
+                    <h2>Deskripsi Produk</h2>
+                    <p>
+                        Technicolour Crystal Candle Holder adalah aksesoris dekoratif yang dibuat dari keramik berkualitas tinggi. Tempat lilin ini dirancang dengan warna-warni yang mencolok dan bentuk geometris yang modern, menjadikannya tambahan yang menarik dan elegan untuk ruangan mana pun.
+                    </p><br>
+                    <h2>Spesifikasi Produk</h2>
+                    <p>Ukuran : Tinggi 10-15cm, Diameter 5-7cm</p>
+                    <p>Warna : Kombinasi warna cerah seperti oranye, ungu, merah, dan kuning</p>
+                    <p>Bahan : Keramik berkualitas tinggi.</p>   
+                    <p>Berat : Sekitar 500-700 gram/tempat lilin</p><br>    
+                    <div class="product-price"><h2>IDR 105K</h2></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="item-detail-modal9">
+        <div class="modal-container">
+            <a href="#" class="close-icon9"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="Gambar/Keramik1.png" alt="category 1" />
+                <div class="category-content">
+                    <h2>Deskripsi Produk</h2>
+                    <p>
+                        Boho Glass Drink Pitcher adalah wadah minum kaca dengan desain yang elegan dan modern. Pitcher ini memiliki warna amber yang menarik dan dilengkapi dengan pegangan bergelombang berwarna pink yang memberikan sentuhan artistik dan unik. Bagian atas pitcher memiliki cerat yang memudahkan menuangkan minuman tanpa tumpah. Cocok untuk digunakan dalam berbagai acara, baik formal maupun santai, dan dapat menambah estetika meja makan Anda.
+                    </p><br>
+                    <h2>Spesifikasi Produk</h2>
+                    <p>Ukuran : Tinggi 30 cm, Diameter 10 cm</p>
+                    <p>Warna : Oren transparan</p>
+                    <p>Bahan : Keramik berkualitas tinggi.</p>   
+                    <p>Berat : 1 kg</p><br>    
+                    <div class="product-price"><h2>IDR 185K</h2></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="item-detail-modal10">
+        <div class="modal-container">
+            <a href="#" class="close-icon10"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="Gambar/Keramik2.png" alt="category 1" />
+                <div class="category-content">
+                    <h2>Deskripsi Produk</h2>
+                    <p>
+                        Satu set gelas anggur yang elegan dan modern. Set ini terdiri dari dua gelas dengan desain unik yang menambah kesan mewah dan artistik pada setiap hidangan. Gelas-gelas ini memiliki desain ergonomis yang nyaman digenggam serta warna yang indah untuk mempercantik meja Anda.
+                    </p><br>
+                    <h2>Spesifikasi Produk</h2>
+                    <p>Ukuran : Tinggi gelas sekitar 25 cm, diameter mulut gelas sekitar 8 cm</p>
+                    <p>Warna : Kombinasi warna bening, orens, dan merah muda</p>
+                    <p>Bahan : Keramik berkualitas tinggi.</p>   
+                    <p>Berat : 600 gram/gelas</p><br>    
+                    <div class="product-price"><h2>IDR 150K</h2></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="item-detail-modal11">
+        <div class="modal-container">
+            <a href="#" class="close-icon11"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="Gambar/Keramik3.png" alt="category 1" />
+                <div class="category-content">
+                    <h2>Deskripsi Produk</h2>
+                    <p>
+                        Vas kaca unik berbentuk jamur dengan desain elegan yang menghiasi dekorasi rumah Anda. Vas ini memiliki bagian atas yang bundar menyerupai topi jamur dan bagian bawah yang lebih sempit, dengan tiga bunga ungu cantik yang menghiasi bagian dalamnya. Vas ini akan menambah sentuhan artistik pada setiap ruangan.
+                    </p><br>
+                    <h2>Spesifikasi Produk</h2>
+                    <p>Ukuran : 20 cm x 15 cm.</p>
+                    <p>Warna : Kombinasi warna Biru dan ungu</p>
+                    <p>Bahan : Keramik berkualitas tinggi.</p>   
+                    <p>Berat : 1 kg</p><br>    
+                    <div class="product-price"><h2>IDR 285K</h2></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="item-detail-modal12">
+        <div class="modal-container">
+            <a href="#" class="close-icon12"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="Gambar/Keramik8.png" alt="category 1" />
+                <div class="category-content">
+                    <h2>Deskripsi Produk</h2>
+                    <p>
+                        Sepasang penahan buku elegan yang dirancang dengan bentuk melengkung. Satu penahan memiliki warna transparan, sedangkan yang lain memiliki gradasi warna amber dan transparan. Desain modern dan elegan dari penahan buku ini membuatnya tidak hanya fungsional tetapi juga dekoratif, menambah keindahan pada rak buku Anda
+                    </p><br>
+                    <h2>Spesifikasi Produk</h2>
+                    <p>Ukuran : Tinggi sekitar 15 cm, lebar sekitar 10 cm</p>
+                    <p>Warna : Transparan dan gradasi amber</p>
+                    <p>Bahan : Keramik berkualitas tinggi.</p>   
+                    <p>Berat : 2 kg per set (1 kg per penahan buku)</p><br>    
+                    <div class="product-price"><h2>IDR 225K</h2></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal" id="item-detail-modal13">
+    <div class="modal-container">
+        <a href="#" class="close-icon13"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/Rotan 2.jpg" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Tambahkan sentuhan alami dan elegan ke ruang tamu atau teras Anda dengan Kursi Rotan Elegan ini. Dirancang dengan pola anyaman yang indah dan bahan rotan berkualitas tinggi, kursi ini menawarkan kenyamanan dan gaya dalam satu paket.
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : 60cm x 60cm x 90cm</p>
+                <p>Warna : Cokelat Natural</p>
+                <p>Bahan : Rotan alami</p>   
+                <p>Berat : 2 kg</p><br>    
+                <div class="product-price"><h2>IDR 240K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal14">
+    <div class="modal-container">
+        <a href="#" class="close-icon14"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/Rotan3.png" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Hadirkan keindahan alami ke kamar tidur Anda dengan Nakas Rotan Elegan ini. Dibuat dari rotan berkualitas tinggi, nakas ini menawarkan keunikan dan fungsionalitas yang tidak tertandingi. Desainnya yang estetis dan multifungsi menjadikannya pilihan sempurna untuk dekorasi rumah Anda.
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : 50cm x 40cm x 60cm</p>
+                <p>Warna : Cokelat Natural</p>
+                <p>Bahan : Rotan alami</p>   
+                <p>Berat : 3.5 kg</p><br>    
+                <div class="product-price"><h2>IDR 130K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal15">
+    <div class="modal-container">
+        <a href="#" class="close-icon15"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/Rotan4.png" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Nikmati keindahan dan fungsionalitas dengan Keranjang Baju Rotan Elegan ini. Dibuat dari rotan alami berkualitas tinggi, keranjang ini tidak hanya berfungsi sebagai tempat penyimpanan baju kotor, tetapi juga sebagai elemen dekoratif yang menambah sentuhan alami pada rumah Anda.
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : 45cm x 35cm x 60cm</p>
+                <p>Warna : Cokelat natural</p>
+                <p>Bahan : Rotan alami</p>   
+                <p>Berat : 0.5 kg</p><br>    
+                <div class="product-price"><h2>IDR 150K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal16">
+    <div class="modal-container">
+        <a href="#" class="close-icon16"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/Rotan5.png" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Hadirkan kehangatan dan keindahan alami ke dalam rumah Anda dengan Lampu Rotan Alami ini. Dibuat dengan tangan, dari rotan berkualitas tinggi, lampu ini menawarkan sentuhan artistik yang memukau dan fungsionalitas yang sempurna untuk berbagai ruangan.
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : Diameter 40cm x Tinggi 60cm</p>
+                <p>Warna : Cokelat natural</p>
+                <p>Bahan : Rotan alami</p>   
+                <p>Sumber Cahaya : Bohlam LED (tidak termasuk)</p><br>    
+                <div class="product-price"><h2>IDR 210K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal17">
+    <div class="modal-container">
+        <a href="#" class="close-icon17"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/Rotan1.jpg" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Tambahkan sentuhan alami dan elegan ke dekorasi rumah Anda dengan tisu yang dilengkapi kotak rotan ini. Dirancang dengan estetika yang cantik dan bahan yang ramah lingkungan, kotak tisu ini memadukan fungsi dan gaya dalam satu paket.
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : 25cm x 15cm x 10cm</p>
+                <p>Warna : Cokelat natural</p>
+                <p>Bahan : Rotan alami</p>   
+                <p>Berat : 0.2 kg</p><br>    
+                <div class="product-price"><h2>IDR 100K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal18">
+    <div class="modal-container">
+        <a href="#" class="close-icon18"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/Rotan6.png" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Bawa keindahan dan nuansa alami ke setiap acara piknik Anda dengan Keranjang Piknik Rotan Elegan ini. Dibuat dengan tangan dari rotan berkualitas tinggi, keranjang ini menawarkan kombinasi sempurna antara estetika dan fungsionalitas. Cocok untuk setiap petualangan luar ruangan, keranjang ini menjadikan piknik Anda lebih istimewa dan nyaman.
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : 50cm x 30cm x 40cm</p>
+                <p>Warna : Cokelat natural</p>
+                <p>Bahan : Rotan alami</p>   
+                <p>Berat : 0.3 kg</p><br>    
+                <div class="product-price"><h2>IDR 95K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal19">
+    <div class="modal-container">
+        <a href="#" class="close-icon19"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/TanahLiat1.png" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Desain bergelombang pada bagian bawah yang memberikan sentuhan artistik pada dekorasi tanaman Anda. Pot ini dilengkapi dengan piringan matching untuk menampung kelebihan air, sehingga menjaga kebersihan area tanaman Anda. Satu pot diisi dengan tanaman hijau yang menambah kesegaran.
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : Tinggi 15 cm, diameter 20 cm</p>
+                <p>Warna : Cokelat alami</p>
+                <p>Bahan : Tanah Liat berkualitas tinggi.</p>   
+                <p>Berat : 1.2 kg</p><br>    
+                <div class="product-price"><h2>IDR 140K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal20">
+    <div class="modal-container">
+        <a href="#" class="close-icon20"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/TanahLiat2.png" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Penyimpanan sendok dan garpu yang dirancang untuk menjaga alat makan tetap teratur dan mudah dijangkau. Terbuat dari bahan stainless steel berkualitas tinggi, rak ini memiliki desain yang elegan dan tahan karat, cocok untuk digunakan di dapur atau meja makan
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : Tinggi 13.5 cm, lebar 12 cm</p>
+                <p>Warna : Cokelat alami</p>
+                <p>Bahan : Tanah Liat berkualitas tinggi.</p>   
+                <p>Berat : 1 kg</p><br>    
+                <div class="product-price"><h2>IDR 50K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal21">
+    <div class="modal-container">
+        <a href="#" class="close-icon21"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/TanahLiat3.png" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Teko air dengan desain klasik yang elegan dan tahan lama. Dibuat dari bahan stainless steel berkualitas tinggi, teko ini memiliki kapasitas 1.7 liter dan fitur boil cepat yang memudahkan Anda mendapatkan air panas hanya dalam waktu singkat. Desain non-drip spout memastikan air tidak tumpah saat disiramkan
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : Tinggi 25 cm, lebar 15 cm</p>
+                <p>Warna : Cokelat alami</p>
+                <p>Bahan : Tanah Liat berkualitas tinggi.</p>      
+                <p>Berat : 500 gram</p><br>    
+                <div class="product-price"><h2>IDR 110K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal22">
+    <div class="modal-container">
+        <a href="#" class="close-icon22"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/TanahLiat5.png" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Cangkir minum yang terbuat dari bahan seperti terracotta dengan desain sederhana dan rustic. Cangkir ini memiliki pola tekstur di bagian tengah yang memberikan sentuhan unik dan alami. Ideal untuk digunakan sehari-hari atau sebagai tambahan dekorasi meja makan Anda
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : Tinggi sekitar 10 cm, diameter 8 cm</p>
+                <p>Warna : Cokelat alami</p>
+                <p>Bahan : Tanah Liat berkualitas tinggi.</p>      
+                <p>Berat : 150 gram/cangkir</p><br>    
+                <div class="product-price"><h2>IDR 70K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal23">
+    <div class="modal-container">
+        <a href="#" class="close-icon23"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/TanahLiat9.png" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Alat barbeku berbahan tanah liat yang dirancang untuk memberikan pengalaman memasak yang alami dan unik. Alat ini cocok untuk digunakan di halaman atau balkon, memberikan cita rasa yang segar dan alami pada makanan Anda
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : Tinggi 30 cm, diameter 40 cm</p>
+                <p>Warna : Cokelat alami</p>
+                <p>Bahan : Tanah Liat berkualitas tinggi.</p>
+                <p>Berat : 1 kg</p><br>    
+                <div class="product-price"><h2>IDR 105K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal24">
+    <div class="modal-container">
+        <a href="#" class="close-icon24"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/TanahLiat11.png" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                   Mangkok yang dirancang dengan gaya yang menarik dan nyaman. Terbuat dari tanah liat berkualitas tinggi, wadah ini cocok untuk menyajikan berbagai jenis makanan seperti nasi, sayuran, atau hidangan lainnya. Desainnya elegan dan mudah disimpan, membuatnya menjadi pilihan yang praktis untuk rumah Anda
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : 100 cm x 200 cm.</p>
+                <p>Warna : Cokelat alami</p>
+                <p>Bahan : Tanah Liat berkualitas tinggi.</p>
+                <p>Berat : 250 gram/mangkok</p><br>    
+                <div class="product-price"><h2>IDR 55K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal25">
+    <div class="modal-container">
+        <a href="#" class="close-icon25"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/Kayu1.jpg" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Tambahkan sentuhan alami dan elegan ke meja makan Anda dengan Mangkok Kayu Alami ini. Dibuat dari kayu berkualitas tinggi, mangkok ini tidak hanya berfungsi sebagai wadah makanan, tetapi juga sebagai elemen dekoratif yang memperindah meja Anda
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : Diameter 25cm, tinggi 10cm</p>
+                <p>Warna : Cokelat Natural</p>
+                <p>Bahan : Kayu alami</p>   
+                <p>Berat : 500gram/mangkok</p><br>    
+                <div class="product-price"><h2>IDR 40K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal26">
+    <div class="modal-container">
+        <a href="#" class="close-icon26"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/Kayu2.jpg" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Nikmati pengalaman makan yang lebih alami dan nyaman dengan Sendok Kayu Alami ini. Dibuat dari kayu berkualitas tinggi, sendok ini tidak hanya berfungsi sebagai alat makan, tetapi juga menambah estetika alami pada setiap hidangan Anda
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : Panjang 20cm, lebar 4cm</p>
+                <p>Warna : Cokelat Natural</p>
+                <p>Bahan : Kayu alami</p>    
+                <p>Berat : 30 gram</p><br>    
+                <div class="product-price"><h2>IDR 50K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal27">
+    <div class="modal-container">
+        <a href="#" class="close-icon27"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/Kayu3.jpg" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Hadirkan sentuhan alami dan elegan ke meja Anda dengan Gelas Kayu Alami ini. Dibuat dari kayu berkualitas tinggi, gelas ini menawarkan keindahan alami sekaligus fungsionalitas yang sempurna untuk menikmati minuman favorit Anda
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : Diameter 8cm, tinggi 10cm</p>
+                <p>Warna : Cokelat Natural</p>
+                <p>Bahan : Kayu alami</p> 
+                <p>Berat : 150 gram</p><br>    
+                <div class="product-price"><h2>IDR 50K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal28">
+    <div class="modal-container">
+        <a href="#" class="close-icon28"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/Kayu4.jpg" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Tambahkan sentuhan alami dan estetis ke meja makan Anda dengan Wadah Makan Kayu Alami ini. Dibuat dari kayu berkualitas tinggi, wadah ini menghadirkan keindahan dan fungsionalitas yang sempurna untuk menyajikan berbagai jenis hidangan
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : Diameter 30cm, tinggi 10cm</p>
+                <p>Warna : Cokelat Natural</p>
+                <p>Bahan : Kayu alami</p>  
+                <p>Berat : 550 gram</p><br>    
+                <div class="product-price"><h2>IDR 100K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal29">
+    <div class="modal-container">
+        <a href="#" class="close-icon29"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/Kayu5.jpg" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Tambahkan sentuhan alami dan elegan ke ruangan Anda dengan Jam Dinding Kayu Elegan ini. Dibuat dari kayu berkualitas tinggi, jam dinding ini tidak hanya berfungsi sebagai penunjuk waktu, tetapi juga sebagai elemen dekoratif yang memperindah interior rumah Anda
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : Diameter 30cm</p>
+                <p>Warna : Cokelat Natural</p>
+                <p>Bahan : Kayu alami</p>    
+                <p>Berat : Sekitar 150 gram/meter</p><br>    
+                <div class="product-price"><h2>IDR 150K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="item-detail-modal30">
+    <div class="modal-container">
+        <a href="#" class="close-icon30"><i data-feather="x"></i></a>
+        <div class="modal-content">
+            <img src="Gambar/Kayu6.jpg" alt="category 1" />
+            <div class="category-content">
+                <h2>Deskripsi Produk</h2>
+                <p>
+                    Ciptakan suasana hangat dan alami di ruangan Anda dengan Lampu Kayu Alami ini. Terbuat dari kayu berkualitas tinggi, lampu ini menghadirkan kombinasi sempurna antara estetika alami dan fungsionalitas yang modern
+                </p><br>
+                <h2>Spesifikasi Produk</h2>
+                <p>Ukuran : Tinggi 45cm, diameter alas 15cm</p>
+                <p>Warna : Cokelat Natural</p>
+                <p>Bahan : Kayu alami</p>   
+                <p>Berat : 1 kg</p><br>    
+                <div class="product-price"><h2>IDR 325K</h2></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Modal Box Item Detail End -->
+    <!-- Feather Icons -->
+    <script>
+        feather.replace();
+    </script>
+
+    <!-- My JavaScript -->
+    <script src="Serenade.js"></script>
+</body>
+
+</html>

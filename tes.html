@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Barang Menggunakan DOM</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        padding: 8px 12px;
+        background: #f0f0f0;
+        margin-bottom: 5px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      button {
+        background: #ff4d4d;
+        color: white;
+        border: none;
+        padding: 4px 8px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      img {
+        max-width: 50px;
+        max-height: 50px;
+        margin-right: 10px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tambah Barang</h1>
+    <form id="itemForm">
+      <input type="text" id="itemInput" placeholder="Nama Barang" required />
+      <input
+        type="number"
+        id="stockInput"
+        placeholder="Stok"
+        required
+        min="1"
+      />
+      <input type="text" id="typeInput" placeholder="Jenis Barang" required />
+      <input type="url" id="imageInput" placeholder="URL Gambar" required />
+      <input
+        type="number"
+        id="priceInput"
+        placeholder="Harga"
+        required
+        min="0"
+      />
+      <button type="submit">Tambah</button>
+    </form>
+    <ul id="itemList"></ul>
+
+    <script>
+      document
+        .getElementById("itemForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Mencegah halaman refresh
+          const itemInput = document.getElementById("itemInput");
+          const stockInput = document.getElementById("stockInput");
+          const typeInput = document.getElementById("typeInput");
+          const imageInput = document.getElementById("imageInput");
+          const priceInput = document.getElementById("priceInput");
+          const itemName = itemInput.value.trim();
+          const stock = stockInput.value.trim();
+          const type = typeInput.value.trim();
+          const imageUrl = imageInput.value.trim();
+          const price = priceInput.value.trim();
+
+          if (itemName && stock && type && imageUrl && price) {
+            const itemList = document.getElementById("itemList");
+
+            // Buat elemen li baru
+            const listItem = document.createElement("li");
+
+            // Buat elemen gambar
+            const itemImage = document.createElement("img");
+            itemImage.src = imageUrl;
+            itemImage.alt = itemName;
+
+            const itemText = document.createElement("span");
+            itemText.innerHTML = `<strong>${itemName}</strong> - Stok: ${stock} - Jenis: ${type} - Harga: Rp${price}`;
+
+            // Tambah tombol hapus
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "Hapus";
+            deleteButton.addEventListener("click", function () {
+              itemList.removeChild(listItem);
+            });
+
+            listItem.appendChild(itemImage);
+            listItem.appendChild(itemText);
+            listItem.appendChild(deleteButton);
+            itemList.appendChild(listItem);
+
+            // Reset input
+            itemInput.value = "";
+            stockInput.value = "";
+            typeInput.value = "";
+            imageInput.value = "";
+            priceInput.value = "";
+          }
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- My Style -->
+    <link rel="stylesheet" href="Serenade.css" />
+  </head>
+
+  <body class="FAQ">
+    <!-- NavBar Start -->
+    <nav class="navbar">
+      <a href="Home.html" class="navbar-logo">Serenade.</a>
+
+      <div class="navbar-nav">
+        <a href="Home.html">Home</a>
+        <a href="Home.html#about">About</a>
+        <a href="FAQ.html">FAQ</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart-button"
+          ><i data-feather="shopping-cart"></i
+        ></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+
+      <!-- Search From Start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!-- Search From End -->
+
+      <!-- Shopping Cart Start -->
+      <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="Gambar/Produk1.jpg" alt="Product 1" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 30K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img src="Gambar/Produk1.jpg" alt="Product 1" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 30K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img src="Gambar/Produk1.jpg" alt="Product 1" />
+          <div class="item-detail">
+            <h3>Product 1</h3>
+            <div class="item-price">IDR 30K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+      </div>
+      <!-- Shopping Cart End -->
+    </nav>
+    <!-- NavBar End -->
+
+    <!-- FAQ Start -->
+    <div class="wrap">
+        <h1>Frequently Asked Questions</h1>
+  
+        <div class="faq">
+            <button class="accordion">
+              Apa yang harus saya lakukan jika mengalami kendala/eror/blank/ page di web Serenade?
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+              <h3><strong>Tutup dan Buka Kembali Aplikasi:</strong></h3>
+                <p>Cobalah untuk menutup aplikasi Serenade dan membukanya kembali.</p><br>
+              <h3><strong>Bersihkan Cache dan Cookie:</strong> </h3>
+                <p>Buka pengaturan browser Anda dan hapus cache serta cookie. Ini bisa membantu membersihkan data yang mungkin menyebabkan masalah.</p><br>
+              <h3><strong>Periksa Koneksi Internet:</strong></h3>
+                <p>Pastikan koneksi internet Anda stabil. Cobalah untuk menghubungkan melalui Wi-Fi atau data seluler yang kuat.</p><br>
+              <h3><strong>Hubungi Dukungan Pelanggan:</strong></h3>
+                <p>Jika masalah masih berlanjut, hubungi dukungan pelanggan Serenade melalui email, telepon, atau fitur chat langsung di web mereka.</p><br>
+              </p>
+            </div>
+          </div>
+  
+        <div class="faq">
+          <button class="accordion">
+            Bagaimana cara memesan produk?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="pannel">
+            <p>
+              Anda bisa memesan produk melalui website kami dengan menambahkan produk ke keranjang dan mengikuti langkah-langkah pembayaran.
+            </p>
+          </div>
+        </div>
+  
+        <div class="faq">
+          <button class="accordion">
+            Metode pembayaran apa saja yang diterima?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="pannel">
+            <p>
+              Kami menerima berbagai metode pembayaran termasuk kartu kredit, transfer bank, dan dompet digital.
+            </p>
+          </div>
+        </div>
+  
+        <div class="faq">
+          <button class="accordion">
+            Berapa lama waktu pengiriman?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="pannel">
+            <p>
+              Waktu pengiriman bervariasi tergantung lokasi Anda. Biasanya, pengiriman membutuhkan waktu 3-7 hari kerja.
+            </p>
+          </div>
+        </div>
+  
+        <div class="faq">
+          <button class="accordion">
+            Bagaimana cara menghubungi layanan pelanggan?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="pannel">
+            <p>
+              Anda dapat menghubungi layanan pelanggan kami melalui email di [email@perusahaan.com] atau telepon di [nomor telepon].
+            </p>
+          </div>
+        </div>
+      </div>
+    <!-- FAQ End -->
+    
+      <!-- Footer Start -->
+    <footer>
+      <div class="socials">
+        <a href="https://www.instagram.com/telkomuniversity?igsh=bG5oczcyeXRyNzgz"><i data-feather="instagram"></i> </a>
+        <a href="https://x.com/UnivTelkom?t=DH747GFKw0vRYtiKT-rZlQ&s=09"><i data-feather="twitter"></i> </a>
+        <a href="https://www.facebook.com/share/15QzA39W9m/"><i data-feather="facebook"></i> </a>
+    </div>
+        <div class="links">
+            <a href="Home.html">Home</a>
+            <a href="Home.html#about">About</a>
+            <a href="Contact.html">Contact Us</a>
+            <a href="FAQ.html">FAQ</a>
+          </div>
+        <div class="credit">
+          <p>Created by <a href="Home.html">Serenade</a>. | &copy; 2024</p>
+        </div>
+      </footer>
+      <!-- Footer End -->
+  
+      <!-- Feather Icons -->
+      <script>
+        feather.replace();
+      </script>
+  
+      <!-- My JavaScript -->
+      <script src="Serenade.js"></script>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          this.parentElement.classList.toggle("active");
+
+          var pannel = this.nextElementSibling;
+
+          if (pannel.style.display === "block") {
+            pannel.style.display = "none";
+          } else {
+            pannel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
