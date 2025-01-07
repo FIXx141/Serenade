@@ -24,7 +24,7 @@
         <div class="navbar-nav">
             <a href="Home.html">Home</a>
             <a href="Home.html#about">About</a>
-            <a href="Shop.html#product">Product</a>
+            <a href="Shop.html#category">Category</a>
             <li class="nav-item dropdown">
                 <a href="Shop.html#shop" class="dropdown-toggle">Shop</a>
                 <div class="dropdown-menu">
@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </li>
-            <a href="FAQ.html">FAQ</a>
+            <a href="#reviews">Reviews</a>
             <li class="nav-item dropdown">
                 <a href="Shop.html" class="dropdown-toggle">Ganti Warna</a>
                 <div class="dropdown-menu">
@@ -67,8 +67,9 @@
 
         <!-- Search From Start -->
         <div class="search-form">
-            <input type="search" id="search-box" placeholder="search here..." />
-            <label for="search-box"><i data-feather="search"></i></label>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search..." />
+              </div>
         </div>
         <!-- Search From End -->
 
@@ -127,13 +128,14 @@
     </section>
     <!-- category Section End -->
 
+    <div class="results" id="resultsList">
     <!-- Shop Section Start -->
     <!-- Kain -->
     <section class="shop" id="shop">
         <h2 id="kategori-kain" class="percategory">Kain</h2>
         <p>
             Produk kain yang menawarkan kelembutan luar biasa dan ketahanan yang optimal, ideal untuk berbagai kebutuhan Anda. </p>
-
+            
         <div class="row">
             <div class="shop-card" id="card1">
                 <div class="discount">-10%</div>
@@ -152,7 +154,7 @@
                         <a href="#card1" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button1"></i
+                    <a href="#card1"><i data-feather="eye" class="item-detail-button1"></i
               ></a>
                 </div>
             </div>
@@ -172,7 +174,7 @@
                     <button class="add-to-cart">
                         <a href="#card2" class="item-cart"><i data-feather="shopping-cart"></i></a>
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button2"></i
+                    <a href="#card2"><i data-feather="eye" class="item-detail-button2"></i
               ></a>
                 </div>
             </div>
@@ -193,7 +195,7 @@
                         <a href="#card3" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button3"></i
+                    <a href="#card3"><i data-feather="eye" class="item-detail-button3"></i
               ></a>
                 </div>
             </div>
@@ -210,7 +212,7 @@
                         <a href="#card4" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button4"></i
+                    <a href="#card4"><i data-feather="eye" class="item-detail-button4"></i
               ></a>
                 </div>
             </div>
@@ -227,7 +229,7 @@
                         <a href="#card5" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button5"></i
+                    <a href="#card5"><i data-feather="eye" class="item-detail-button5"></i
               ></a>
                 </div>
             </div>
@@ -244,12 +246,13 @@
                         <a href="#card6" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button6"></i
+                    <a href="#card6"><i data-feather="eye" class="item-detail-button6"></i
               ></a>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Keramik -->
     <section class="shop" id="shop">
         <h2 id="kategori-keramik" class="shop">Keramik</h2>
@@ -274,7 +277,7 @@
                         <a href="#card7" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button7"></i
+                    <a href="#card7"><i data-feather="eye" class="item-detail-button7"></i
               ></a>
                 </div>
             </div>
@@ -295,7 +298,7 @@
                         <a href="#card8" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button8"></i
+                    <a href="#card8"><i data-feather="eye" class="item-detail-button8"></i
               ></a>
                 </div>
             </div>
@@ -316,7 +319,7 @@
                         <a href="#card9" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button9"></i
+                    <a href="#card9"><i data-feather="eye" class="item-detail-button9"></i
               ></a>
                 </div>
             </div>
@@ -333,7 +336,7 @@
                         <a href="#card10" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button10"></i
+                    <a href="#card10"><i data-feather="eye" class="item-detail-button10"></i
               ></a>
                 </div>
             </div>
@@ -350,7 +353,7 @@
                         <a href="#card11" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button11"></i
+                    <a href="#card11"><i data-feather="eye" class="item-detail-button11"></i
               ></a>
                 </div>
             </div>
@@ -367,7 +370,7 @@
                         <a href="#card12" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button12"></i
+                    <a href="#card12"><i data-feather="eye" class="item-detail-button12"></i
               ></a>
                 </div>
             </div>
@@ -398,7 +401,7 @@
                         <a href="#card13" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button13"></i
+                    <a href="#card13"><i data-feather="eye" class="item-detail-button13"></i
               ></a>
                 </div>
             </div>
@@ -419,7 +422,7 @@
                         <a href="#card14" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button14"></i
+                    <a href="#card14"><i data-feather="eye" class="item-detail-button14"></i
               ></a>
                 </div>
             </div>
@@ -440,7 +443,7 @@
                         <a href="#card15" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button15"></i
+                    <a href="#card15"><i data-feather="eye" class="item-detail-button15"></i
               ></a>
                 </div>
             </div>
@@ -457,7 +460,7 @@
                         <a href="#card16" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button16"></i
+                    <a href="#card16"><i data-feather="eye" class="item-detail-button16"></i
               ></a>
                 </div>
             </div>
@@ -474,7 +477,7 @@
                         <a href="#card17" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button17"></i
+                    <a href="#card17"><i data-feather="eye" class="item-detail-button17"></i
               ></a>
                 </div>
             </div>
@@ -491,7 +494,7 @@
                         <a href="#card18" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button18"></i
+                    <a href="#card18"><i data-feather="eye" class="item-detail-button18"></i
               ></a>
                 </div>
             </div>
@@ -522,7 +525,7 @@
                         <a href="#card19" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button19"></i
+                    <a href="#card19"><i data-feather="eye" class="item-detail-button19"></i
               ></a>
                 </div>
             </div>
@@ -543,7 +546,7 @@
                         <a href="#card20" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button20"></i
+                    <a href="#card20"><i data-feather="eye" class="item-detail-button20"></i
               ></a>
                 </div>
             </div>
@@ -564,7 +567,7 @@
                         <a href="#card21" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button21"></i
+                    <a href="#card21"><i data-feather="eye" class="item-detail-button21"></i
               ></a>
                 </div>
             </div>
@@ -581,7 +584,7 @@
                         <a href="#card22" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button22"></i
+                    <a href="#card22"><i data-feather="eye" class="item-detail-button22"></i
               ></a>
                 </div>
             </div>
@@ -598,7 +601,7 @@
                         <a href="#card23" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button23"></i
+                    <a href="#card23"><i data-feather="eye" class="item-detail-button23"></i
               ></a>
                 </div>
             </div>
@@ -615,13 +618,13 @@
                         <a href="#card24" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button24"></i
+                    <a href="#card24"><i data-feather="eye" class="item-detail-button24"></i
               ></a>
                 </div>
             </div>
         </div>
     </section>  
-    <!--Kayu -->
+    <!-- Kayu  -->
     <section class="shop" id="shop">
         <h2 id="kategori-kayu" class="percategory">Kayu</h2>
         <p>
@@ -646,7 +649,7 @@
                         <a href="#card25" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button25"></i
+                    <a href="#card25"><i data-feather="eye" class="item-detail-button25"></i
               ></a>
                 </div>
             </div>
@@ -667,7 +670,7 @@
                         <a href="#card26" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button26"></i
+                    <a href="#card26"><i data-feather="eye" class="item-detail-button26"></i
               ></a>
                 </div>
             </div>
@@ -688,7 +691,7 @@
                         <a href="#card27" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button27"></i
+                    <a href="#card27"><i data-feather="eye" class="item-detail-button27"></i
               ></a>
                 </div>
             </div>
@@ -705,7 +708,7 @@
                         <a href="#card28" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button28"></i
+                    <a href="#card28"><i data-feather="eye" class="item-detail-button28"></i
               ></a>
                 </div>
             </div>
@@ -722,7 +725,7 @@
                         <a href="#card29" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button29"></i
+                    <a href="#card29"><i data-feather="eye" class="item-detail-button29"></i
               ></a>
                 </div>
             </div>
@@ -739,16 +742,18 @@
                         <a href="#card30" class="item-cart"><i data-feather="shopping-cart"></i></a>
                         
                     </button>
-                    <a href="#"><i data-feather="eye" class="item-detail-button30"></i
+                    <a href="#card30"><i data-feather="eye" class="item-detail-button30"></i
               ></a>
                 </div>
             </div>
         </div>
     </section>
     <!-- Shop Section End -->
+</div>
+
 
     <!-- Reviews Section Start -->
-    <div class="reviews">
+    <div class="reviews" id="reviews">
         <h1>Customer's <span style="color: #b6895b">Review</span></h1>
         <div class="review-cards" id="reviewCards">
           <div class="card">

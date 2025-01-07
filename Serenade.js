@@ -15,6 +15,26 @@ document.querySelector("#search-button").onclick = (e) => {
   searchBox.focus();
   e.preventDefault();
 };
+// Get references to the input and list elements
+const searchInput = document.getElementById("searchInput");
+const resultsList = document.getElementById("resultsList");
+
+// Add event listener to the search input
+searchInput.addEventListener("input", function () {
+  const filter = searchInput.value.toLowerCase();
+  const items = resultsList.getElementsByClassName("shop-content");
+
+  // Loop through all list items and hide those that don't match the search query
+  for (let i = 0; i < items.length; i++) {
+    const itemText = items[i].textContent || items[i].innerText;
+    if (itemText.toLowerCase().indexOf(filter) > -1) {
+      items[i].style.display = "";
+    } else {
+      items[i].style.display = "none";
+    }
+  }
+});
+// Toggle Search
 
 // Toggle class active untuk shopping cart
 const shoppingCart = document.querySelector(".shopping-cart");
@@ -23,6 +43,22 @@ document.querySelector("#shopping-cart-button").onclick = (e) => {
   shoppingCart.classList.toggle("active");
   e.preventDefault();
 };
+
+// Klik diluar elemen
+const hm = document.querySelector("#hamburger-menu");
+const sb = document.querySelector("#search-button");
+
+document.addEventListener("click", function (e) {
+  if (!hm.contains(e.target) && !navbarNav.contains(e.target)) {
+    navbarNav.classList.remove("active");
+  }
+});
+
+document.addEventListener("click", function (e) {
+  if (!sb.contains(e.target) && !searchForm.contains(e.target)) {
+    searchForm.classList.remove("active");
+  }
+});
 
 // Notifikasi Shopping Cart Start
 let cartCount = 0;
@@ -106,9 +142,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const cartButton = document.querySelector("#shopping-cart-button");
 
   // Toggle cart visibility
-  cartButton.addEventListener("click", function () {
-    cart.classList.toggle("visible");
-  });
+  // cartButton.addEventListener("click", function () {
+  //   cart.classList.toggle("visible");
+  // });
 
   // Add to Cart functionality
   addToCartButtons.forEach((button) => {
@@ -141,22 +177,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 // Toggle Cart End
-
-// Klik diluar elemen
-const hm = document.querySelector("#hamburger-menu");
-const sb = document.querySelector("#search-button");
-
-document.addEventListener("click", function (e) {
-  if (!hm.contains(e.target) && !navbarNav.contains(e.target)) {
-    navbarNav.classList.remove("active");
-  }
-});
-
-document.addEventListener("click", function (e) {
-  if (!sb.contains(e.target) && !searchForm.contains(e.target)) {
-    searchForm.classList.remove("active");
-  }
-});
 
 // Ganti Warna Start
 const sMerah = document.querySelector("input[name=sMerah]");
