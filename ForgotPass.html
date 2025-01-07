@@ -13,7 +13,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- My Style -->
     <link rel="stylesheet" href="Serenade.css" />
-    <!--Style Login-->
+    <!-- Style Forgot Password -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 
@@ -34,22 +34,58 @@
     </nav>
     <!-- NavBar End -->
 
+    <!-- Forgot Password Start -->
     <div class="wrapper">
         <form id="forgotPasswordForm">
             <h1>Forgot Password</h1>
-            <p>Enter your registered email to receive a reset link.</p>
             <div class="input-box">
-                <input type="email" id="forgotEmail" placeholder="Email" required>
-                <i class="bx bxs-envelope"></i>
+                <input type="text" id="emailOrUsername" placeholder="Enter your Email or Username" required />
+                <i class="bx bxs-user"></i>
             </div>
-            <button type="submit" class="btn">Send Reset Link</button>
+
+            <button type="submit" class="btn" style="background-color: white; border: 1px solid black;">
+                Submit
+            </button>
+
+            <div class="login-link">
+                <p>
+                    Remember your password?
+                    <a href="Login.html">Login</a>
+                </p>
+            </div>
         </form>
-        <div class="login-link">
-            <p>Remembered your password? <a href="Login.html">Login</a></p>
-        </div>
     </div>
+    <!-- Forgot Password End -->
+
+    <!-- Feather Icons -->
     <script>
         feather.replace();
+    </script>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('forgotPasswordForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const emailOrUsername = document.getElementById('emailOrUsername').value;
+
+            // Ambil data pengguna yang ada di localStorage
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+            let user = users.find(u => u.username === emailOrUsername || u.email === emailOrUsername);
+
+            if (user) {
+                // Jika pengguna ditemukan, arahkan mereka ke halaman ganti password
+                const newPassword = prompt('Masukkan kata sandi baru Anda untuk melanjutkan:');
+                if (newPassword) {
+                    user.password = newPassword; // Ganti password
+                    localStorage.setItem('users', JSON.stringify(users)); // Simpan perubahan ke localStorage
+                    alert('Kata sandi Anda telah berhasil diubah!');
+                    window.location.href = 'login.html'; // Arahkan ke halaman login setelah reset
+                }
+            } else {
+                alert('Username atau Email tidak ditemukan!');
+            }
+        });
     </script>
 
     <!-- My JavaScript -->
