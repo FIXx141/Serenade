@@ -141,10 +141,24 @@
       <a href="#" class="navbar-logo">Serenade.</a>
 
       <div class="navbar-nav">
-        <a href="Home.html">Home</a>
-        <a href="Home.html#about">About</a>
+        <a href="HomeLogin.html">Home</a>
+        <a href="HomeLogin.html#about">About</a>
+        <a href="Shop.html#category">Category</a>
         <li class="nav-item dropdown">
-          <a href="TambahBarang.html" class="dropdown-toggle">Ganti Warna</a>
+          <a href="Shop.html#shop" class="dropdown-toggle">Shop</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-section">
+              <a href="#kategori-kain">Kain</a>
+              <a href="#kategori-keramik">Keramik</a>
+              <a href="#kategori-rotan">Rotan</a>
+              <a href="#kategori-tanahLiat">Tanah Liat</a>
+              <a href="#kategori-kayu">Kayu</a>
+            </div>
+          </div>
+        </li>
+        <a href="#reviews">Reviews</a>
+        <li class="nav-item dropdown">
+          <a href="Shop.html" class="dropdown-toggle">Ganti Warna</a>
           <div class="dropdown-menu">
             <div class="dropdown-section">
               <div class="kotak merah"></div>
@@ -161,14 +175,20 @@
       <!-- Navbar Extra Start -->
       <div class="navbar-extra">
         <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart-button">
+          <i data-feather="shopping-cart"></i>
+          <span id="cart-count">0</span></a
+        >
+        <a href="Home.html" id="" user><i data-feather="user-x"></i></a> >
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
       <!-- Navbar Extra End -->
 
       <!-- Search From Start -->
       <div class="search-form">
-        <input type="search" id="search-box" placeholder="search here..." />
-        <label for="search-box"><i data-feather="search"></i></label>
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search..." />
+        </div>
       </div>
       <!-- Search From End -->
 

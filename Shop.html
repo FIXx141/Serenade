@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Link Font Awesome untuk ikon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- My Style -->
     <link rel="stylesheet" href="Serenade.css" />
 </head>
@@ -22,8 +24,8 @@
         <a href="#" class="navbar-logo">Serenade.</a>
 
         <div class="navbar-nav">
-            <a href="Home.html">Home</a>
-            <a href="Home.html#about">About</a>
+            <a href="HomeLogin.html">Home</a>
+            <a href="HomeLogin.html#about">About</a>
             <a href="Shop.html#category">Category</a>
             <li class="nav-item dropdown">
                 <a href="Shop.html#shop" class="dropdown-toggle">Shop</a>
@@ -34,7 +36,6 @@
                         <a href="#kategori-rotan">Rotan</a>
                         <a href="#kategori-tanahLiat">Tanah Liat</a>
                         <a href="#kategori-kayu">Kayu</a>
-
                     </div>
                 </div>
             </li>
@@ -59,8 +60,15 @@
             <a href="#" id="search-button"><i data-feather="search"></i></a>
             <a href="#" id="shopping-cart-button">
                 <i data-feather="shopping-cart"></i>
-                <span id="cart-count">0</span>
-            </a>
+                <span id="cart-count">0</span></a> 
+                <li class="nav-item dropdownn">
+                    <a href="Home.html" id="user"><i data-feather="user"></i></a>
+                    <div class="dropdownn-menu">
+                        <div class="dropdownn-section">
+                            <a href="Home.html">Log Out</a>
+                        </div>
+                    </div>
+                </li>    
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
         <!-- Navbar Extra End -->
@@ -77,8 +85,12 @@
         <div class="shopping-cart" id="shopping-cart">
             <div class="cart-items">
                 <h3>Your Cart</h3>
+                <!-- <ul id="cart-list"></ul> -->
+                <ul id="cart-list"></ul>
+                <div id="total-price" class="total">Total: IDR 0</div>
+                <!-- Tambahkan elemen ini -->
                 <a href="https://wa.me/628888581813">
-                    <h3 class="btn-wa">Pesan by Whatsapp</h3>
+                    <h3 class="btn-wa">Check Out by Whatsapp</h3>
                 </a>
             </div>
         </div>
@@ -139,6 +151,11 @@
         <div class="row">
             <div class="shop-card" id="card1">
                 <div class="discount">-10%</div>
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Kain1.jpg" alt="category 1" />
                 </div>
@@ -146,7 +163,7 @@
                     <h3>Heritage Batik Fabric</h3>
                 </div>
                 <div class="shop-price">
-                    <span class="discounted-price">IDR 247.5K</span>
+                    <span class="discounted-price">IDR 247K</span>
                     <span class="original-price">IDR 275K</span>
                 </div>
                 <div class="shop-icons">
@@ -160,6 +177,11 @@
             </div>
             <div class="shop-card" id="card2">
                 <div class="discount">-15%</div>
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Kain2.jpg" alt="category 1" />
                 </div>
@@ -180,6 +202,11 @@
             </div>
             <div class="shop-card" id="card3">
                 <div class="discount">-12%</div>
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Kain3.jpg" alt="category 1" />
                 </div>
@@ -187,7 +214,7 @@
                     <h3>Etnik Batik Textile</h3>
                 </div>
                 <div class="shop-price">
-                    <span class="discounted-price">IDR 281.6K</span>
+                    <span class="discounted-price">IDR 281K</span>
                     <span class="original-price">IDR 320K</span>
                 </div>
                 <div class="shop-icons">
@@ -200,6 +227,11 @@
                 </div>
             </div>
             <div class="shop-card" id="card4">
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Kain4.jpg" alt="category 1" />
                 </div>
@@ -217,6 +249,11 @@
                 </div>
             </div>
             <div class="shop-card" id="card5">
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Kain5.jpg" alt="category 1" />
                 </div>
@@ -234,6 +271,11 @@
                 </div>
             </div>
             <div class="shop-card" id="card6">
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Kain6.jpg" alt="category 1" />
                 </div>
@@ -262,6 +304,11 @@
         <div class="row">
             <div class="shop-card" id="card7">
                 <div class="discount">-10%</div>
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Keramik7.png" alt="category 1" />
                 </div>
@@ -269,7 +316,7 @@
                     <h3>Infinity Crystal Vase</h3>
                 </div>
                 <div class="shop-price">
-                    <span class="discounted-price">IDR 148.5K</span>
+                    <span class="discounted-price">IDR 148K</span>
                     <span class="original-price">IDR 165K</span>
                 </div>
                 <div class="shop-icons">
@@ -283,6 +330,11 @@
             </div>
             <div class="shop-card" id="card8">
                 <div class="discount">-15%</div>
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Keramik5.png" alt="category 1" />
                 </div>
@@ -290,7 +342,7 @@
                     <h3>Technicolour Crystal Candle Hold</h3>
                 </div>
                 <div class="shop-price">
-                    <span class="discounted-price">IDR 89.25k</span>
+                    <span class="discounted-price">IDR 89k</span>
                     <span class="original-price">IDR 105K</span>
                 </div>
                 <div class="shop-icons">
@@ -304,6 +356,11 @@
             </div>
             <div class="shop-card" id="card9">
                 <div class="discount">-20%</div>
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Keramik1.png" alt="category 1" />
                 </div>
@@ -324,6 +381,11 @@
                 </div>
             </div>
             <div class="shop-card" id="card10">
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Keramik2.png" alt="category 1" />
                 </div>
@@ -341,6 +403,11 @@
                 </div>
             </div>
             <div class="shop-card" id="card11">
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Keramik3.png" alt="category 1" />
                 </div>
@@ -358,6 +425,11 @@
                 </div>
             </div>
             <div class="shop-card" id="card12">
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Keramik8.png" alt="category 1" />
                 </div>
@@ -386,6 +458,11 @@
         <div class="row">
             <div class="shop-card" id="card13">
                 <div class="discount">-12%</div>
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Rotan1.jpg" alt="category 2" />
                 </div>
@@ -393,7 +470,7 @@
                     <h3>Rustic Royale Chair</h3>
                 </div>
                 <div class="shop-price">
-                    <span class="discounted-price">IDR 211.2K</span>
+                    <span class="discounted-price">IDR 211K</span>
                     <span class="original-price">IDR 240K</span>
                 </div>
                 <div class="shop-icons">
@@ -407,6 +484,11 @@
             </div>
             <div class="shop-card" id="card14">
                 <div class="discount">-15%</div>
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Rotan2.png" alt="category 1" />
                 </div>
@@ -414,7 +496,7 @@
                     <h3>Rustic Chic Nakas</h3>
                 </div>
                 <div class="shop-price">
-                    <span class="discounted-price">IDR 110.5K</span>
+                    <span class="discounted-price">IDR 110K</span>
                     <span class="original-price">IDR 130K</span>
                 </div>
                 <div class="shop-icons">
@@ -428,6 +510,11 @@
             </div>
             <div class="shop-card" id="card15">
                 <div class="discount">-10%</div>
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Rotan3.png" alt="category 1" />
                 </div>
@@ -448,6 +535,11 @@
                 </div>
             </div>
             <div class="shop-card" id="card16">
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Rotan4.png" alt="category 1" />
                 </div>
@@ -465,6 +557,11 @@
                 </div>
             </div>
             <div class="shop-card" id="card17">
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Rotan5.jpg" alt="category 1" />
                 </div>
@@ -482,6 +579,11 @@
                 </div>
             </div>
             <div class="shop-card" id="card18">
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Rotan6.png" alt="category 1" />
                 </div>
@@ -510,6 +612,11 @@
         <div class="row">
             <div class="shop-card" id="card19">
                 <div class="discount">-10%</div>
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/TanahLiat1.png" alt="category 1" />
                 </div>
@@ -531,6 +638,11 @@
             </div>
             <div class="shop-card" id="card20">
                 <div class="discount">-11%</div>
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/TanahLiat2.png" alt="category 1" />
                 </div>
@@ -538,7 +650,7 @@
                     <h3>Cutlery Stand</h3>
                 </div>
                 <div class="shop-price">
-                    <span class="discounted-price">IDR 44.5K</span>
+                    <span class="discounted-price">IDR 44K</span>
                     <span class="original-price">IDR 50K</span>
                 </div>
                 <div class="shop-icons">
@@ -552,6 +664,11 @@
             </div>
             <div class="shop-card" id="card21">
                 <div class="discount">-13%</div>
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/TanahLiat3.png" alt="category 1" />
                 </div>
@@ -559,7 +676,7 @@
                     <h3>Earthen Sip Cup</h3>
                 </div>
                 <div class="shop-price">
-                    <span class="discounted-price">IDR 95.7K</span>
+                    <span class="discounted-price">IDR 95K</span>
                     <span class="original-price">IDR 110K</span>
                 </div>
                 <div class="shop-icons">
@@ -572,6 +689,11 @@
                 </div>
             </div>
             <div class="shop-card" id="card22">
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/TanahLiat5.png" alt="category 1" />
                 </div>
@@ -589,6 +711,11 @@
                 </div>
             </div>
             <div class="shop-card" id="card23">
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/TanahLiat9.png" alt="category 1" />
                 </div>
@@ -606,6 +733,11 @@
                 </div>
             </div>
             <div class="shop-card" id="card24">
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/TanahLiat11.png" alt="category 1" />
                 </div>
@@ -634,6 +766,11 @@
         <div class="row">
             <div class="shop-card" id="card25">
                 <div class="discount">-15%</div>
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Kayu1.png" alt="category 1" />
                 </div>
@@ -655,6 +792,11 @@
             </div>
             <div class="shop-card" id="card26">
                 <div class="discount">-8%</div>
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Kayu2.png" alt="category 1" />
                 </div>
@@ -676,6 +818,11 @@
             </div>
             <div class="shop-card" id="card27">
                 <div class="discount">-5%</div>
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Kayu3.png" alt="category 1" />
                 </div>
@@ -683,7 +830,7 @@
                     <h3>TimberSip Cup</h3>
                 </div>
                 <div class="shop-price">
-                    <span class="discounted-price">IDR 47.5K</span>
+                    <span class="discounted-price">IDR 47K</span>
                     <span class="original-price">IDR 50K</span>
                 </div>
                 <div class="shop-icons">
@@ -696,13 +843,18 @@
                 </div>
             </div>
             <div class="shop-card" id="card28">
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Kayu4.png" alt="category 1" />
                 </div>
                 <div class="shop-content">
                     <h3>PureWood Platter</h3>
                 </div>
-                <div class="shop-price">IDR 10K</div>
+                <div class="shop-price">IDR 90K</div>
                 <div class="shop-icons">
                     <button class="add-to-cart">
                         <a href="#card28" class="item-cart"><i data-feather="shopping-cart"></i></a>
@@ -713,6 +865,11 @@
                 </div>
             </div>
             <div class="shop-card" id="card29">
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Kayu5.png" alt="category 1" />
                 </div>
@@ -730,6 +887,11 @@
                 </div>
             </div>
             <div class="shop-card" id="card30">
+                <div class="hover-icons">
+                    <div class="icon share-icon" title="Bagikan Produk">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
                 <div class="shop-image">
                     <img src="Gambar/Kayu6.png" alt="category 1" />
                 </div>
@@ -890,15 +1052,15 @@
             <a href="https://www.facebook.com/share/15QzA39W9m/"><i data-feather="facebook"></i> </a>
         </div>
         <div class="links">
-            <a href="Home.html">Home</a>
-            <a href="Home.html#about">About</a>
-            <a href="Shop.html#product">Product</a>
+            <a href="HomeLogin.html">Home</a>
+            <a href="HomeLogin.html">About</a>
+            <a href="Shop.html#category">Category</a>
             <a href="Shop.html#shop">Shop</a>
             <a href="Contact.html">Contact Us</a>
             <a href="FAQ.html">FAQ</a>
         </div>
         <div class="credit">
-            <p>Created by <a href="Home.html">Serenade</a>. | &copy; 2024</p>
+            <p>Created by <a href="HomeLogin.html#about">Serenade</a>. | &copy; 2024</p>
         </div>
     </footer>
     <!-- Footer End -->

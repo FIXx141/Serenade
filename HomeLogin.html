@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="Serenade.css" />
   </head>
 
-  <body>
+  <body class="Home">
     <!-- NavBar Start -->
     <nav class="navbar">
       <a href="#" class="navbar-logo">Serenade.</a>
@@ -40,7 +40,7 @@
         </li>
         <a href="#reviews">Reviews</a>
         <li class="nav-item dropdown">
-          <a href="Contact.html" class="dropdown-toggle">Ganti Warna</a>
+          <a href="Shop.html" class="dropdown-toggle">Ganti Warna</a>
           <div class="dropdown-menu">
             <div class="dropdown-section">
               <div class="kotak merah"></div>
@@ -59,16 +59,9 @@
         <a href="#" id="search-button"><i data-feather="search"></i></a>
         <a href="#" id="shopping-cart-button">
           <i data-feather="shopping-cart"></i>
-          <span id="cart-count">0</span></a
-        >
-        <li class="nav-item dropdownn">
-          <a href="Home.html" id="user"><i data-feather="user"></i></a>
-          <div class="dropdownn-menu">
-            <div class="dropdownn-section">
-              <a href="Home.html">Log Out</a>
-            </div>
-          </div>
-        </li>
+          <span id="cart-count">0</span>
+        </a>
+        <a href="Home.html" id="user"><i data-feather="user"></i></a> >
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
       <!-- Navbar Extra End -->
@@ -85,12 +78,8 @@
       <div class="shopping-cart" id="shopping-cart">
         <div class="cart-items">
           <h3>Your Cart</h3>
-          <!-- <ul id="cart-list"></ul> -->
-          <ul id="cart-list"></ul>
-          <div id="total-price" class="total">Total: IDR 0</div>
-          <!-- Tambahkan elemen ini -->
           <a href="https://wa.me/628888581813">
-            <h3 class="btn-wa">Check Out by Whatsapp</h3>
+            <h3 class="btn-wa">Pesan by Whatsapp</h3>
           </a>
         </div>
       </div>
@@ -98,60 +87,67 @@
     </nav>
     <!-- NavBar End -->
 
-    <!-- Contact Section Start -->
-    <section id="contact" class="contact">
-      <h2><span>Contact</span> Us</h2>
+    <!-- Hero Section Start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Selamat Datang di <span>Serenade</span></h1>
+        <p>
+          Jelajahi koleksi kami dan temukan pesona Kerajinan Tangan Indonesia
+          yang sesungguhnya.
+        </p>
+        <a href="Login.html" class="cta">Start Now</a>
+      </main>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="about">
+      <h2><span>Tentang</span> Kami</h2>
 
       <div class="row">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3202259179784!2d107.62848277363132!3d-6.971496093029162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9adaf2f99a3%3A0xaefd20f00bdb096d!2sTelkom%20University%20Convention%20Hall!5e0!3m2!1sid!2sid!4v1733198557651!5m2!1sid!2sid"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          class="map"
-        ></iframe>
+        <section class="containerr">
+          <div class="slider-wrapper">
+            <div class="slider">
+              <img src="Gambar/Carousel1.jpg" id="slide-1" />
+              <img src="Gambar/Carousel2.jpg" id="slide-2" />
+              <img src="Gambar/Carousel3.jpg" id="slide-3" />
+            </div>
+            <div class="slider-nav">
+              <a href="#slide-1"></a>
+              <a href="#slide-2"></a>
+              <a href="#slide-3"></a>
+            </div>
+          </div>
+        </section>
 
-        <form action="">
-          <a href="Home.html" class="input-link">
-            <div class="input-group">
-              <a href="https://maps.app.goo.gl/jdZE4CvDD86mUxTm7"
-                ><i
-                  data-feather="map-pin"
-                  style="color: white; text-decoration: none"
-                ></i
-              ></a>
-              <p>Lokasi Serenade</p>
-            </div>
-          </a>
-          <a href="Home.html" class="input-link">
-            <div class="input-group">
-              <a href="mailto:SerenadeCraft6@gmail.com"
-                ><i
-                  data-feather="mail"
-                  style="color: white; text-decoration: none"
-                ></i
-              ></a>
-              <p>SerenadeCraft6@gmail.com</p>
-            </div>
-          </a>
-          <a href="Home.html" class="input-link">
-            <div class="input-group">
-              <a href="ContactForm.html"
-                ><i
-                  data-feather="phone"
-                  style="color: white; text-decoration: none"
-                ></i
-              ></a>
-              <p>088980695436</p>
-            </div>
-          </a>
-        </form>
+        <div class="content">
+          <h3>Selamat datang di <strong>Serenade</strong>!</h3>
+          <p>
+            Di <strong>Serenade</strong>, kami berdedikasi untuk memberikan
+            produk dan layanan terbaik kepada pelanggan kami. Kami bangga dengan
+            komitmen kami terhadap kualitas, inovasi, dan kepuasan pelanggan.
+            Tim kami terdiri dari para profesional berpengalaman yang memiliki
+            keahlian dan passion dalam industri ini.
+          </p>
+          <p>
+            Anda dapat menemukan produk kerajinan tangan Indonesia yang
+            autentik, berkualitas, dan penuh dengan sentuhan seni. Serenade
+            hadir sebagai wujud cinta kami terhadap kekayaan budaya Indonesia
+            yang melimpah, terpancar melalui setiap detail kerajinan yang kami
+            tawarkan.
+          </p>
+          <p>
+            Jelajahi koleksi kami dan temukan pesona kerajinan tangan Indonesia
+            yang sesungguhnya.
+          </p>
+          <p>Serenade - merayakan keindahan dalam setiap sentuhan.</p>
+        </div>
       </div>
     </section>
-    <!-- Contact Section End -->
+    <!-- About Section End -->
 
     <!-- Footer Start -->
-    <footer class="footer-contact">
+    <footer>
       <div class="socials">
         <a
           href="https://www.instagram.com/telkomuniversity?igsh=bG5oczcyeXRyNzgz"
@@ -167,6 +163,7 @@
       <div class="links">
         <a href="Home.html#home">Home</a>
         <a href="Home.html#about">About</a>
+        <a href="Contact.html">Contact Us</a>
         <a href="FAQ.html">FAQ</a>
       </div>
       <div class="credit">

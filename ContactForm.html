@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Serenade</title>
+    <title>Contact Form</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,8 +15,73 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- My Style -->
     <link rel="stylesheet" href="Serenade.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .contact-form-container {
+        background-color: #f5deb3;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+      .contact-form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+        color: #333;
+      }
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      .form-group input:focus,
+      .form-group textarea:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+      .form-group textarea {
+        resize: none;
+        height: 100px;
+      }
+      .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #8b0000;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+      }
+      .submit-btn:hover {
+        background-color: #b6895b;
+      }
+    </style>
   </head>
-
   <body>
     <!-- NavBar Start -->
     <nav class="navbar">
@@ -40,7 +105,7 @@
         </li>
         <a href="#reviews">Reviews</a>
         <li class="nav-item dropdown">
-          <a href="Contact.html" class="dropdown-toggle">Ganti Warna</a>
+          <a href="ContactForm.html" class="dropdown-toggle">Ganti Warna</a>
           <div class="dropdown-menu">
             <div class="dropdown-section">
               <div class="kotak merah"></div>
@@ -98,84 +163,43 @@
     </nav>
     <!-- NavBar End -->
 
-    <!-- Contact Section Start -->
-    <section id="contact" class="contact">
-      <h2><span>Contact</span> Us</h2>
-
-      <div class="row">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.3202259179784!2d107.62848277363132!3d-6.971496093029162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9adaf2f99a3%3A0xaefd20f00bdb096d!2sTelkom%20University%20Convention%20Hall!5e0!3m2!1sid!2sid!4v1733198557651!5m2!1sid!2sid"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          class="map"
-        ></iframe>
-
-        <form action="">
-          <a href="Home.html" class="input-link">
-            <div class="input-group">
-              <a href="https://maps.app.goo.gl/jdZE4CvDD86mUxTm7"
-                ><i
-                  data-feather="map-pin"
-                  style="color: white; text-decoration: none"
-                ></i
-              ></a>
-              <p>Lokasi Serenade</p>
-            </div>
-          </a>
-          <a href="Home.html" class="input-link">
-            <div class="input-group">
-              <a href="mailto:SerenadeCraft6@gmail.com"
-                ><i
-                  data-feather="mail"
-                  style="color: white; text-decoration: none"
-                ></i
-              ></a>
-              <p>SerenadeCraft6@gmail.com</p>
-            </div>
-          </a>
-          <a href="Home.html" class="input-link">
-            <div class="input-group">
-              <a href="ContactForm.html"
-                ><i
-                  data-feather="phone"
-                  style="color: white; text-decoration: none"
-                ></i
-              ></a>
-              <p>088980695436</p>
-            </div>
-          </a>
-        </form>
-      </div>
-    </section>
-    <!-- Contact Section End -->
-
-    <!-- Footer Start -->
-    <footer class="footer-contact">
-      <div class="socials">
-        <a
-          href="https://www.instagram.com/telkomuniversity?igsh=bG5oczcyeXRyNzgz"
-          ><i data-feather="instagram"></i>
-        </a>
-        <a href="https://x.com/UnivTelkom?t=DH747GFKw0vRYtiKT-rZlQ&s=09"
-          ><i data-feather="twitter"></i>
-        </a>
-        <a href="https://www.facebook.com/share/15QzA39W9m/"
-          ><i data-feather="facebook"></i>
-        </a>
-      </div>
-      <div class="links">
-        <a href="Home.html#home">Home</a>
-        <a href="Home.html#about">About</a>
-        <a href="FAQ.html">FAQ</a>
-      </div>
-      <div class="credit">
-        <p>
-          Created by <a href="HomeLogin.html#about">Serenade</a>. | &copy; 2024
-        </p>
-      </div>
-    </footer>
-    <!-- Footer End -->
+    <!-- Contact Form Start -->
+    <div class="contact-form-container">
+      <h2>Contact Form</h2>
+      <form onsubmit="sendMessage()">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+    <!-- Contact Form End -->
 
     <!-- Feather Icons -->
     <script>
@@ -184,5 +208,23 @@
 
     <!-- My JavaScript -->
     <script src="Serenade.js"></script>
+    <script>
+      function sendMessage() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        const url =
+          "https://api.whatsapp.com/send?phone=628888581813&text=Halo%20admin%2C%0ASaya%20*" +
+          name +
+          "*%0AEmail%20saya%20*" +
+          email +
+          "*%0A%0A*" +
+          message +
+          "*";
+
+        window.open(url);
+      }
+    </script>
   </body>
 </html>
