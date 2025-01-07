@@ -626,6 +626,18 @@ select {
 
 /* Shop Section */
 
+.shop .row .shop-card .shop-image {
+  position: relative;
+  text-align: center;
+  padding-top: 2rem;
+  overflow: hidden;
+}
+
+.shop .row .shop-card .shop-image:hover img {
+  transition: transform ease-in-out 0.3s;
+  transform: scale(1.1);
+}
+
 .shop {
   padding: 8rem 7% 1.4rem;
 }
@@ -732,9 +744,57 @@ select {
   font-size: 1.2rem;
 }
 
+.shop-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #f7f0e8;
+  color: #8b0000;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.shop-price {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.discounted-price {
+  font-size: 18px;
+  color: #8b0000;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.original-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
 /* Shop Section End */
 
 /* Footer */
+
+.footer-contact {
+  background-color: #513c28;
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 6rem;
+}
 
 footer {
   background-color: #513c28;
@@ -802,7 +862,7 @@ footer .credit a {
   margin: 15% auto;
   padding: 1.2rem;
   border: 1px solid #666;
-  width: 100%;
+  width: 90%;
   animation: animateModal 0.5s;
   height: 50%;
 }
@@ -1092,6 +1152,7 @@ footer .credit a {
 /* Login register Section End*/
 
 /* FAQ Section */
+/* FAQ Section */
 
 .wrap {
   max-width: 75%;
@@ -1114,6 +1175,7 @@ footer .credit a {
   background-color: white;
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   width: 100%;
   padding: 2rem 2.5rem;
@@ -1132,14 +1194,14 @@ footer .credit a {
 
 .active,
 .accordion:hover {
-  background-color: #f1f7f5;
+  background-color: #f7f0e8;
 }
 
 .pannel {
   padding: 0 2rem 2.5rem 2rem;
-  background-color: white;
+  background-color: #f7f0e8;
   overflow: hidden;
-  background-color: #f1f7f5;
+  background-color: #f7f0e8;
   display: none;
 }
 
@@ -1152,14 +1214,13 @@ h3 {
 }
 
 .faq {
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(167, 5, 5);
   margin: 10px 0;
 }
 
 .faq.active {
-  border: none;
+  border: 2px solid rgb(167, 5, 5);
 }
-
 /* FAQ Section End */
 
 /* Contact Section Start */
@@ -1241,14 +1302,12 @@ h3 {
 
 /* Katalog Section */
 
-.dropdown,
-#colorPicker {
+.dropdown {
   position: relative;
   display: inline-block;
 }
 
-.dropdown-menu,
-#colorPicker {
+.dropdown-menu {
   display: none;
   position: absolute;
   background-color: white;
@@ -1258,8 +1317,7 @@ h3 {
   border-radius: 5px;
 }
 
-.dropdown-menu a,
-#colorPicker {
+.dropdown-menu a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -1267,8 +1325,7 @@ h3 {
   transition: background-color 0.3s;
 }
 
-.dropdown-menu a,
-#colorPicker:hover {
+.dropdown-menu a:hover {
   background-color: #ddd;
 }
 
@@ -1312,6 +1369,17 @@ html {
   html {
     font-size: 65%;
   }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 150%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
   #hamburger-menu {
     display: inline-block;
   }
@@ -1319,7 +1387,7 @@ html {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: #b6895b;
+    background-color: #f2cb97;
     width: 30rem;
     height: 100vh;
     transition: 0.3s;
@@ -1328,7 +1396,7 @@ html {
     right: 0;
   }
   .navbar .navbar-nav a {
-    color: var(--bg);
+    color: #8b0000;
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;

@@ -24,7 +24,7 @@ document.querySelector("#shopping-cart-button").onclick = (e) => {
   e.preventDefault();
 };
 
-// Notifikasi Shopping Cart
+// Notifikasi Shopping Cart Start
 let cartCount = 0;
 const cartItems = [];
 
@@ -46,22 +46,42 @@ function addToCart(itemId, itemName, itemPrice) {
   updateCartUI();
 }
 
+function removeFromCart(itemId) {
+  const itemIndex = cartItems.findIndex((item) => item.id === itemId);
+  if (itemIndex !== -1) {
+    cartCount -= cartItems[itemIndex].quantity; // Kurangi jumlah notifikasi dengan quantity item yang dihapus
+    cartItems.splice(itemIndex, 1); // Hapus item dari keranjang
+    updateCartUI();
+  }
+}
+
 function updateCartUI() {
   const cartCountElement = document.getElementById("cart-count");
   const cartListElement = document.getElementById("cart-list");
 
   cartCountElement.textContent = cartCount;
-  cartCountElement.classList.add("show");
+  cartCountElement.classList.toggle("show", cartCount > 0);
 
   cartListElement.innerHTML = "";
   cartItems.forEach((item) => {
     const listItem = document.createElement("li");
     listItem.innerHTML = `
-                    <span class="item-name">${item.name}</span>
-                    <span class="item-quantity">x${item.quantity}</span>
-                    <span class="item-price">${item.price}</span>
-                `;
+            <span class="item-name">${item.name}</span>
+            <span class="item-quantity">x${item.quantity}</span>
+            <span class="item-price">${item.price}</span>
+            <button class="remove-item" data-id="${item.id}">Remove</button>
+        `;
     cartListElement.appendChild(listItem);
+  });
+
+  // Tambahkan event listener untuk tombol hapus
+  const removeButtons = document.querySelectorAll(".remove-item");
+  removeButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      const itemId = button.getAttribute("data-id");
+      removeFromCart(itemId);
+    });
   });
 }
 
@@ -75,6 +95,52 @@ addToCartButtons.forEach((button) => {
     addToCart(itemId, itemName, itemPrice);
   });
 });
+
+// Notifikasi Shopping Cart End
+
+// Toggle Cart Start
+document.addEventListener("DOMContentLoaded", function () {
+  const addToCartButtons = document.querySelectorAll(".add-to-cart");
+  const cart = document.querySelector("#shopping-cart");
+  const cartItemsContainer = cart.querySelector(".cart-items");
+  const cartButton = document.querySelector("#shopping-cart-button");
+
+  // Toggle cart visibility
+  cartButton.addEventListener("click", function () {
+    cart.classList.toggle("visible");
+  });
+
+  // Add to Cart functionality
+  addToCartButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const productCard = this.closest(".shop-card");
+      const itemName = productCard.querySelector(".shop-content").textContent;
+      const itemPrice = productCard.querySelector(".shop-price").textContent;
+
+      const cartItem = document.createElement("div");
+      cartItem.className = "cart-item";
+      cartItem.innerHTML = `
+              <div>
+                  <h3>${itemName}</h3>
+                  <div class="item-price">${itemPrice}</div>
+              </div>
+              <i data-feather="trash-2" class="remove-item"></i>
+              
+          `;
+
+      cartItemsContainer.appendChild(cartItem);
+      feather.replace(); // Update icons
+
+      // Add event listener for removing items
+      cartItem
+        .querySelector(".remove-item")
+        .addEventListener("click", function () {
+          cartItem.remove();
+        });
+    });
+  });
+});
+// Toggle Cart End
 
 // Klik diluar elemen
 const hm = document.querySelector("#hamburger-menu");
@@ -202,7 +268,7 @@ document.querySelector(".submit-btn").addEventListener("click", () => {
 });
 // Reviews End
 
-// Modal Box
+// Modal Box Start
 const itemDetailModal1 = document.querySelector("#item-detail-modal1");
 const itemDetailButtons1 = document.querySelectorAll(".item-detail-button1");
 const itemDetailModal2 = document.querySelector("#item-detail-modal2");
@@ -866,46 +932,4 @@ window.onclick = (e) => {
     itemDetailModal30.style.display = "none";
   }
 };
-
-// Toggle Cart
-document.addEventListener("DOMContentLoaded", function () {
-  const addToCartButtons = document.querySelectorAll(".add-to-cart");
-  const cart = document.querySelector("#shopping-cart");
-  const cartItemsContainer = cart.querySelector(".cart-items");
-  const cartButton = document.querySelector("#shopping-cart-button");
-
-  // Toggle cart visibility
-  cartButton.addEventListener("click", function () {
-    cart.classList.toggle("visible");
-  });
-
-  // Add to Cart functionality
-  addToCartButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const productCard = this.closest(".shop-card");
-      const itemName = productCard.querySelector(".shop-content").textContent;
-      const itemPrice = productCard.querySelector(".shop-price").textContent;
-
-      const cartItem = document.createElement("div");
-      cartItem.className = "cart-item";
-      cartItem.innerHTML = `
-              <div>
-                  <h3>${itemName}</h3>
-                  <div class="item-price">${itemPrice}</div>
-              </div>
-              <i data-feather="trash-2" class="remove-item"></i>
-              
-          `;
-
-      cartItemsContainer.appendChild(cartItem);
-      feather.replace(); // Update icons
-
-      // Add event listener for removing items
-      cartItem
-        .querySelector(".remove-item")
-        .addEventListener("click", function () {
-          cartItem.remove();
-        });
-    });
-  });
-});
+// Modal Box End

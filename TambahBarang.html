@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Barang Menggunakan DOM</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- My Style -->
+    <link rel="stylesheet" href="Serenade.css" />
+    <style>
+      .tambahBarang {
+        font-family: "Poppins", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      h1 {
+        text-align: center;
+        color: #513c28;
+        margin-top: 20px;
+        padding: 8rem 7% 1.4rem;
+      }
+
+      .itemForm {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin: 20px;
+        padding: 15px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      form input {
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        width: calc(50% - 20px);
+      }
+
+      form button {
+        margin: 0 350px;
+        padding: 12px 20px;
+        background-color: #b6895b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 30%;
+      }
+
+      form button:hover {
+        background-color: #8b0000;
+      }
+
+      .itemTable {
+        width: 90%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: center;
+        font-size: 15px;
+        color: black;
+      }
+
+      th {
+        background-color: #b6895b;
+        color: white;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      img {
+        max-width: 90px;
+        max-height: 90px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      button {
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #e04343;
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #513c28;
+        color: white;
+        margin-top: auto;
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body class="tambahBarang">
+    <!-- NavBar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Serenade.</a>
+
+      <div class="navbar-nav">
+        <a href="Home.html">Home</a>
+        <a href="Home.html#about">About</a>
+        <li class="nav-item dropdown">
+          <a href="TambahBarang.html" class="dropdown-toggle">Ganti Warna</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-section">
+              <div class="kotak merah"></div>
+              <input type="range" name="sMerah" min="0" max="255" />
+              <div class="kotak hijau"></div>
+              <input type="range" name="sHijau" min="0" max="255" />
+              <div class="kotak biru"></div>
+              <input type="range" name="sBiru" min="0" max="255" />
+            </div>
+          </div>
+        </li>
+      </div>
+
+      <!-- Navbar Extra Start -->
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+      <!-- Navbar Extra End -->
+
+      <!-- Search From Start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!-- Search From End -->
+
+      <!-- Shopping Cart Start -->
+      <div class="shopping-cart" id="shopping-cart">
+        <div class="cart-items">
+          <h3>Your Cart</h3>
+          <a href="https://wa.me/628888581813">
+            <h3 class="btn-wa">Pesan by Whatsapp</h3>
+          </a>
+        </div>
+      </div>
+      <!-- Shopping Cart End -->
+    </nav>
+    <!-- NavBar End -->
+
+    <h1>Tambah Barang</h1>
+    <form id="itemForm" class="itemForm">
+      <input type="text" id="itemInput" placeholder="Nama Barang" required />
+      <input
+        type="number"
+        id="stockInput"
+        placeholder="Stok"
+        required
+        min="1"
+      />
+      <input type="text" id="typeInput" placeholder="Jenis Barang" required />
+      <input type="file" id="imageInput" accept="image/*" required />
+      <input
+        type="number"
+        id="priceInput"
+        placeholder="Harga"
+        required
+        min="0"
+      />
+      <button type="submit">Tambah</button>
+    </form>
+
+    <table id="itemTable">
+      <thead>
+        <tr>
+          <th>Gambar</th>
+          <th>Nama Barang</th>
+          <th>Stok</th>
+          <th>Jenis</th>
+          <th>Harga</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="socials">
+        <a
+          href="https://www.instagram.com/telkomuniversity?igsh=bG5oczcyeXRyNzgz"
+          ><i data-feather="instagram"></i>
+        </a>
+        <a href="https://x.com/UnivTelkom?t=DH747GFKw0vRYtiKT-rZlQ&s=09"
+          ><i data-feather="twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/share/15QzA39W9m/"
+          ><i data-feather="facebook"></i>
+        </a>
+      </div>
+      <div class="links">
+        <a href="Home.html">Home</a>
+        <a href="Home.html#about">About</a>
+        <a href="Contact.html">Contact Us</a>
+        <a href="FAQ.html">FAQ</a>
+      </div>
+      <div class="credit">
+        <p>Created by <a href="Home.html">Serenade</a>. | &copy; 2024</p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script>
+      let editingRow = null;
+
+      document
+        .getElementById("itemForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const itemInput = document.getElementById("itemInput");
+          const stockInput = document.getElementById("stockInput");
+          const typeInput = document.getElementById("typeInput");
+          const imageInput = document.getElementById("imageInput");
+          const priceInput = document.getElementById("priceInput");
+
+          const itemName = itemInput.value.trim();
+          const stock = stockInput.value.trim();
+          const type = typeInput.value.trim();
+          const price = priceInput.value.trim();
+          const imageFile = imageInput.files[0];
+
+          if (itemName && stock && type && price) {
+            if (editingRow) {
+              updateRow(editingRow, itemName, stock, type, price, imageFile);
+              editingRow = null;
+            } else {
+              addRow(itemName, stock, type, price, imageFile);
+            }
+
+            itemInput.value = "";
+            stockInput.value = "";
+            typeInput.value = "";
+            imageInput.value = "";
+            priceInput.value = "";
+          }
+        });
+
+      function addRow(name, stock, type, price, imageFile) {
+        const table = document
+          .getElementById("itemTable")
+          .querySelector("tbody");
+        const row = document.createElement("tr");
+
+        const imageCell = document.createElement("td");
+        const image = document.createElement("img");
+        if (imageFile) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            image.src = e.target.result;
+          };
+          reader.readAsDataURL(imageFile);
+        }
+        imageCell.appendChild(image);
+
+        const nameCell = document.createElement("td");
+        nameCell.textContent = name;
+
+        const stockCell = document.createElement("td");
+        stockCell.textContent = stock;
+
+        const typeCell = document.createElement("td");
+        typeCell.textContent = type;
+
+        const priceCell = document.createElement("td");
+        priceCell.textContent = `Rp${price}`;
+
+        const actionCell = document.createElement("td");
+        const editButton = document.createElement("button");
+        editButton.textContent = "Edit";
+        editButton.addEventListener("click", function () {
+          editRow(row, name, stock, type, price);
+        });
+
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Hapus";
+        deleteButton.addEventListener("click", function () {
+          table.removeChild(row);
+        });
+
+        actionCell.appendChild(editButton);
+        actionCell.appendChild(deleteButton);
+
+        row.appendChild(imageCell);
+        row.appendChild(nameCell);
+        row.appendChild(stockCell);
+        row.appendChild(typeCell);
+        row.appendChild(priceCell);
+        row.appendChild(actionCell);
+
+        table.appendChild(row);
+      }
+
+      function editRow(row, name, stock, type, price) {
+        editingRow = row;
+        document.getElementById("itemInput").value = name;
+        document.getElementById("stockInput").value = stock;
+        document.getElementById("typeInput").value = type;
+        document.getElementById("priceInput").value = price;
+      }
+
+      function updateRow(row, name, stock, type, price, imageFile) {
+        const cells = row.children;
+
+        if (imageFile) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            cells[0].querySelector("img").src = e.target.result;
+          };
+          reader.readAsDataURL(imageFile);
+        }
+
+        cells[1].textContent = name;
+        cells[2].textContent = stock;
+        cells[3].textContent = type;
+        cells[4].textContent = `Rp${price}`;
+      }
+    </script>
+    <!-- Modal Box Item Detail End -->
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My JavaScript -->
+    <script src="Serenade.js"></script>
+  </body>
+</html>
