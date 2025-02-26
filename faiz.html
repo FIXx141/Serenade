@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        
+        .slide-in {
+    animation: slide-in 0.5s forwards;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+</style>
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+<!-- Navbar -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-40 flex justify-between items-center p-2 bg-white">
+    <div class="relative">
+        <button onclick="history.back()" class="text-black hover:text-black mr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+    </div>
+    <a href="Home.html"><img id="logo-image" src="aset/png logo.png" class="object-cover mx-auto top-0 h-14 w-14"></a>
+    <div class="flex space-x-4 items-center">
+        <button onclick="toggleCart()" class="flex items-center transition duration-300 hover:scale-105">
+            <svg class="text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+            </svg>
+        </button>
+        <a href="Login.html" class="flex items-center transition duration-300 hover:scale-105">
+            <svg class="text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-width="1.5" d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+            </svg>
+        </a>
+    </div>
+</nav>
+
+<!-- Notification Sidebar -->
+<div id="notifSidebar" class="fixed right-0 top-0 h-full w-1/3 bg-white shadow-lg p-6 transform translate-x-full transition-transform duration-300 z-50">
+    <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold">Your Cart</h2>
+        <button onclick="closeSidebar()" class="text-gray-600 hover:text-gray-900">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shopping-cart-button" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" class="shopping-cart"/>
+            </svg>
+          </button>
+    </div>
+    <div id="notifContent" class="mb-4">
+        <!-- Content dynamically added here -->
+    </div>
+    <button onclick="viewCart()" class="w-full bg-yellow-500 text-white px-4 py-2 rounded">View my cart</button>
+</div>
+
+<!-- Product Section -->
+<section class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 mt-11 top-4">
+    <!-- Image Section -->
+    <div class="space-y-4">
+        <img src="aset/BEANIE.png" alt="Product1" class="rounded-lg shadow-xl">
+    </div>
+
+    <!-- Details Section -->
+    <!-- Details Section -->
+<div>
+  <p class="text-xs bg-gray-800 text-white px-2 py-1 rounded inline-block mb-2">In Stock</p>
+  <h1 class="text-3xl font-bold mb-2">BEANIE SPIDER</h1>
+  <p class="text-sm line-through text-gray-500 mb-4">Rp 195.000</p>
+  <p class="text-lg text-black font-semibold">Rp 185.000</p>
+
+  <p class="text-sm text-gray-600 mb-2">Size:</p>
+  <div class="flex space-x-4 mb-4">
+      <button class="size-button px-4 py-2 rounded border hover:bg-gray-800 hover:text-white" data-size="M">M</button>
+      <button class="size-button px-4 py-2 rounded border hover:bg-gray-800 hover:text-white" data-size="L">L</button>
+      <button class="size-button px-4 py-2 rounded border hover:bg-gray-800 hover:text-white" data-size="XL">XL</button>
+  </div>
+
+  <div class="flex items-center space-x-4 mb-6">
+      <button id="addToCartButton" onclick="addToCart()" class="flex-1 bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition" disabled>
+          Add to Cart
+      </button>
+      <button onclick="buyNow('BEANIE SPIDER', 185000)" class="flex-1 bg-white border border-black py-3 rounded-lg hover:bg-gray-200 transition">
+          Buy It Now
+      </button>
+  </div>
+
+  <ul class="text-sm text-gray-600 space-y-1 mb-6">
+      <li>- LIMITED EDITION (NO RESTOCK) Limited Edition (No Restock)</li>
+      <li>- Free Keychain, Sticker, & Pins</li>
+      <li>- Cotton Combed 20s</li>
+  </ul>
+
+  <div class="text-sm text-gray-600">
+      <p>Delivery:</p>
+      <p>Shipped within 24 hours. Weight: 250-500g</p>
+  </div>
+</div>
+</section>
+<!-- JavaScript -->
+<script>
+    // Toggle class active untuk shopping cart
+const shoppingCart = document.querySelector(".shopping-cart");
+// ketika shopping cart diklik
+document.querySelector("#shopping-cart-button").onclick = (e) => {
+  shoppingCart.classList.toggle("active");
+  e.preventDefault();
+};
+
+const sc = document.querySelector("#shopping-cart-button");
+
+document.addEventListener("click", function (e) {
+  if (!sc.contains(e.target) && !navbarNav.contains(e.target)) {
+    navbarNav.classList.remove("active");
+  }
+});
+
+function toggleCart() {
+    const notifSidebar = document.getElementById('notifSidebar');
+    if (notifSidebar.style.transform === 'translateX(0%)') {
+        closeSidebar();
+    } else {
+        notifSidebar.style.transform = 'translateX(0%)';
+    }
+}
+
+    let cart = [];
+    let selectedSize = null;
+
+    // Function to handle size selection
+   // Function to handle size selection
+document.querySelectorAll('.size-button').forEach(button => {
+    button.addEventListener('click', function() {
+        selectedSize = this.getAttribute('data-size');
+        document.getElementById('addToCartButton').disabled = false; // Enable the Add to Cart button
+        document.querySelectorAll('.size-button').forEach(btn => btn.classList.remove('bg-gray-800', 'text-white'));
+        this.classList.add('bg-gray-800', 'text-white'); // Highlight selected size
+    });
+});
+
+function addToCart() {
+    if (!selectedSize) {
+        alert('Please select a size before adding to cart.');
+        return;
+    }
+
+    const product = {
+    name: 'BEANIE SPIDER',
+    price: 185000,
+    image: 'aset/BEANIE.png',
+    quantity: 1,
+    size: selectedSize
+};
+
+    cart.push(product);
+    showNotification(product);
+    updateCartUI();
+}
+
+function showNotification(product) {
+    const notifContent = document.getElementById('notifContent');
+    notifContent.innerHTML = `
+        <div class="flex justify-between items-center border-b pb-4 mb-4">
+                            <img src="${product.image}" alt="${product.name}" class="w-12 h-12">
+            <div class="ml-4">
+                <h3 class="font-bold">${product.name} (${product.size})</h3>
+                <p>Rp ${product.price}</p>
+            </div>
+        </div>
+    `;
+    const notifSidebar = document.getElementById('notifSidebar');
+    notifSidebar.classList.add('slide-in');
+    notifSidebar.style.transform = 'translateX(0)';
+
+    setTimeout(() => {
+        notifSidebar.style.transform = 'translateX(100%)';
+    }, 3000);
+}
+function closeSidebar() {
+console.log("Sidebar is closing..."); // Tambahkan log untuk debugging
+const notifSidebar = document.getElementById('notifSidebar');
+notifSidebar.style.transform = 'translateX(100%)'; // Menutup sidebar
+
+setTimeout(() => {
+        notifSidebar.style.transform = 'translateX(100%)';
+    }, 3000);
+}
+
+function closeSidebar() {
+    console.log("Sidebar is closing..."); // Tambahkan log untuk debugging
+    const notifSidebar = document.getElementById('notifSidebar');
+    notifSidebar.style.transform = 'translateX(100%)'; // Menutup sidebar
+}
+
+function showNotification(product) {
+    const notifContent = document.getElementById('notifContent');
+    notifContent.innerHTML = `
+        <div class="flex justify-between items-center border-b pb-4 mb-4">
+            <img src="${product.image}" alt="${product.name}" class="w-12 h-12">
+            <div class="ml-4">
+                <h3 class="font-bold">${product.name} (${product.size})</h3>
+                <p>Rp ${product.price}</p>
+            </div>
+        </div>
+    `;
+    const notifSidebar = document.getElementById('notifSidebar');
+    notifSidebar.classList.add('slide-in');
+    notifSidebar.style.transform = 'translateX(0)';
+
+    // Menutup sidebar setelah 3 detik
+    setTimeout(() => {
+        closeSidebar();
+    }, 3000);
+}
+
+function viewCart() {
+    // Logic to view cart can be implemented here
+    closeSidebar();
+    // Redirect to cart page or show cart details
+}
+
+function updateCartUI() {
+    // Logic to update cart UI can be implemented here
+    // This function can be used to display the cart items in the sidebar
+    const notifContent = document.getElementById('notifContent');
+    notifContent.innerHTML = ''; // Clear previous content
+
+    cart.forEach(item => {
+    notifContent.innerHTML += `
+        <div class="flex justify-between items-center border-b pb-4 mb-4">
+            <img src="${item.image}" alt="${item.name}" class="w-12 h-12">
+            <div class="ml-4">
+                <h3 class="font-bold">${item.name} (${item.size})</h3>
+                <p>Rp ${item.price}</p>
+            </div>
+        </div>
+    `;
+});
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+        const closeButton = document.querySelector('.close-button');
+        const slideBar = document.querySelector('.slide-bar');
+
+        if (closeButton && slideBar) {
+            closeButton.addEventListener('click', () => {
+                slideBar.style.display = 'none';
+            });
+        } else {
+            console.error('Close button atau slide bar tidak ditemukan.');
+        }
+    });
+</script>
+</body>
+</html>

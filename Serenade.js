@@ -154,6 +154,7 @@ function updateCartUI() {
             <span class="remove-item" data-id="${item.id}">Remove</span>
         `;
     cartListElement.appendChild(listItem);
+    cartListElement.style.textAlign = "center";
   });
 
   // Tambahkan event listener untuk tombol "Remove"

@@ -394,6 +394,7 @@ select {
 
 .shopping-cart .item-price {
   font-size: 1.2rem;
+  float: right;
 }
 
 .shopping-cart .remove-item {
